@@ -20,11 +20,6 @@ public class PlayerMove : MonoBehaviour
         moveStop = true;
     }
 
-    void FixedUpdate()
-    {
-        
-    }
-
     private void OnMove(InputValue value) {
         if (Mathf.Abs(value.Get<Vector2>().x) == 1 || 
             Mathf.Abs(value.Get<Vector2>().y) == 1) {
