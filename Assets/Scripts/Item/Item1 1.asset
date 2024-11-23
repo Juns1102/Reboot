@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704ee3153bd94b343a232cae96b9129d, type: 3}
   m_Name: Item1 1
   m_EditorClassIdentifier: 
-  name: trash
+  name: awer
   value: 100
   weight: 100
