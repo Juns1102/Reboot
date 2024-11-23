@@ -1,12 +1,10 @@
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    float speed;
     private Vector2 targetPos;
     private bool moveStop;
 
