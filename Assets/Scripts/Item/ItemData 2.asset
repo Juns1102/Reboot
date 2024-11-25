@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ItemData 2
   m_EditorClassIdentifier: 
   sprite: {fileID: 917273136, guid: 62293b77471236146a6e2dc58e35eaf9, type: 3}
-  name: wnstj
+  name: guswns
   value: 39
   weight: 42
