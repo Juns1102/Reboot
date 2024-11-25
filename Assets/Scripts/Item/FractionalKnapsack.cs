@@ -1,16 +1,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+#pragma warning disable CS0618
 
 public class FractionalKnapsack : MonoBehaviour
 {
     public int limitWeight;  
-    private List<ItemData> items = InventoryManager.Instance.items;
+    private List<Item> Items = new List<Item>();
 
     private void Start()
     {
-        (int maxValue, List<ItemData> selectedItems) = SolveKnapsack(items, limitWeight);
-        
+        Items.AddRange(FindObjectsOfType<Item>());
+
+        (int maxValue, List<Item> selectedItems) = SolveKnapsack(Items, limitWeight);
+
         Debug.Log("선택된 물건");
         foreach (var item in selectedItems) {
             Debug.Log($"물건: {item.name}, 가치: {item.value}, 무게: {item.weight}");
@@ -18,7 +21,7 @@ public class FractionalKnapsack : MonoBehaviour
         Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
     }
 
-    public (int maxValue, List<ItemData>) SolveKnapsack(List<ItemData> items, int limitWeight)
+    public (int maxValue, List<Item>) SolveKnapsack(List<Item> items, int limitWeight)
     {
         int n = items.Count;
 
@@ -49,7 +52,7 @@ public class FractionalKnapsack : MonoBehaviour
             }
         }
 
-        List<ItemData> selectedItems = new List<ItemData>();
+        List<Item> selectedItems = new List<Item>();
         int remain = limitWeight;
 
         for (int i = n; i > 0 && remain > 0; i--) {
@@ -65,7 +68,7 @@ public class FractionalKnapsack : MonoBehaviour
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            (int maxValue, List<ItemData> selectedItems) = SolveKnapsack(items, limitWeight);
+            (int maxValue, List<Item> selectedItems) = SolveKnapsack(Items, limitWeight);
 
             Debug.Log("선택된 물건");
             foreach (var item in selectedItems) {
