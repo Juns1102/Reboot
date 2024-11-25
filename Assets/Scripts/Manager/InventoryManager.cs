@@ -11,19 +11,45 @@ public class InventoryManager : Singleton<InventoryManager> {
         QuickSort(items, 0, items.Count - 1, "name");
         Debug.Log("이름 퀵소트");
     }
-
+    public void ReverseSortName()
+    {
+        QuickSort(items, 0, items.Count - 1, "name");
+        ReverseList(items);
+        Debug.Log("이름 역순 퀵소트");
+    }
     public void SortValue()
     {
         QuickSort(items, 0, items.Count - 1, "value");
         Debug.Log("가치 퀵소트");
     }
-
+    public void ReverseSortValue()
+    {
+        QuickSort(items, 0, items.Count - 1, "value");
+        ReverseList(items);
+        Debug.Log("가치 역순 퀵소트");
+    }
     public void SortWeight()
     {
         QuickSort(items, 0, items.Count - 1, "weight");
         Debug.Log("무게 퀵소트");
     }
+    public void ReverseSortWeight()
+    {
+        QuickSort(items, 0, items.Count - 1, "weight");
+        ReverseList(items);
+        Debug.Log("무게 역순 퀵소트");
+    }
+    public void ReverseList(List<GameObject> list)
+    {
+        int left = 0;
+        int right = list.Count - 1;
 
+        while (left < right) {
+            Swap(list, left, right);
+            left++;
+            right--;
+        }
+    }
     private void QuickSort(List<GameObject> list, int left, int right, string Type)
     {
         if (left < right) {
@@ -87,5 +113,8 @@ public class InventoryManager : Singleton<InventoryManager> {
         if (Input.GetKeyDown(KeyCode.Alpha1)) SortName();
         if (Input.GetKeyDown(KeyCode.Alpha2)) SortValue();
         if (Input.GetKeyDown(KeyCode.Alpha3)) SortWeight();
+        if (Input.GetKeyDown(KeyCode.Alpha5)) ReverseSortName();
+        if (Input.GetKeyDown(KeyCode.Alpha6)) ReverseSortValue();
+        if (Input.GetKeyDown(KeyCode.Alpha7)) ReverseSortWeight();
     }
 }
