@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704ee3153bd94b343a232cae96b9129d, type: 3}
   m_Name: ItemData 2
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  name: 
+  sprite: {fileID: 917273136, guid: 62293b77471236146a6e2dc58e35eaf9, type: 3}
+  name: wnstj
   value: 39
   weight: 42

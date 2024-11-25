@@ -1,24 +1,24 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager> {
-    [SerializeField]
-    private bool playerTurn;
-    public List<Item> fieldItems = new List<Item>();
+public class FractionalKnapsack : MonoBehaviour
+{
     public int limitWeight;  
+    private List<ItemData> items = InventoryManager.Instance.items;
 
     private void Start()
     {
-        (int maxValue, List<Item> selectedItems) = SolveKnapsack(fieldItems, limitWeight);
+        (int maxValue, List<ItemData> selectedItems) = SolveKnapsack(items, limitWeight);
         
         Debug.Log("선택된 물건");
         foreach (var item in selectedItems) {
-            Debug.Log($"물건: {item.data.name}, 가치: {item.data.value}, 무게: {item.data.weight}");
+            Debug.Log($"물건: {item.name}, 가치: {item.value}, 무게: {item.weight}");
         }
         Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
     }
 
-    public (int maxValue, List<Item>) SolveKnapsack(List<Item> items, int limitWeight)
+    public (int maxValue, List<ItemData>) SolveKnapsack(List<ItemData> items, int limitWeight)
     {
         int n = items.Count;
 
@@ -33,8 +33,8 @@ public class GameManager : Singleton<GameManager> {
         }
 
         for (int i = 1; i <= n; i++) {
-            int wi = items[i - 1].data.weight;
-            int vi = items[i - 1].data.value;
+            int wi = items[i - 1].weight;
+            int vi = items[i - 1].value;
 
             for (int w = 1; w <= limitWeight; w++) {
                 if (wi > w) {
@@ -49,35 +49,27 @@ public class GameManager : Singleton<GameManager> {
             }
         }
 
-        List<Item> selectedItems = new List<Item>();
+        List<ItemData> selectedItems = new List<ItemData>();
         int remain = limitWeight;
 
         for (int i = n; i > 0 && remain > 0; i--) {
             if (K[i, remain] != K[i - 1, remain]) {
                 selectedItems.Add(items[i - 1]);
-                remain -= items[i - 1].data.weight;
+                remain -= items[i - 1].weight;
             }
         }
 
         return (K[n, limitWeight], selectedItems);
     }
 
-    public bool turnCheck() {
-        return playerTurn;
-    }
-
-    public void turnChange() {
-        playerTurn = !playerTurn;
-    }
-
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            (int maxValue, List<Item> selectedItems) = SolveKnapsack(fieldItems, limitWeight);
+            (int maxValue, List<ItemData> selectedItems) = SolveKnapsack(items, limitWeight);
 
             Debug.Log("선택된 물건");
             foreach (var item in selectedItems) {
-                Debug.Log($"물건: {item.name}, 가치: {item.data.value}, 무게: {item.data.weight}");
+                Debug.Log($"물건: {item.name}, 가치: {item.value}, 무게: {item.weight}");
             }
             Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
         }

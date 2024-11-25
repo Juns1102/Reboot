@@ -58,7 +58,6 @@ public class UIManager : Singleton<UIManager> {
         SetHeadInfo();
         ItemPlace();
         BottumInfoReset();
-        selectSlot = -1;
     }
 
     public void BottumInfoReset() {
@@ -66,5 +65,6 @@ public class UIManager : Singleton<UIManager> {
         itemName.text = "Name: ";
         itemValue.text = "Value: ";
         itemWeight.text = "Weight: ";
+        selectSlot = -1;
     }
 }
