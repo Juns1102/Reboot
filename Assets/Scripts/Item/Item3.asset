@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 700974265, guid: f31dcce30889fc64c99864fb656e2713, type: 3}
   name: trash
   value: 60
-  weight: 122
+  weight: 22

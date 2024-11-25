@@ -22,8 +22,10 @@ public class Slot : MonoBehaviour
 
     public void ClickBtn(){
         UIManager.Instance.itemImage.sprite = InventoryManager.Instance.items[slotNum].sprite;
+        UIManager.Instance.itemImage.gameObject.SetActive(true);
         UIManager.Instance.itemName.text = "Name: " + InventoryManager.Instance.items[slotNum].name;
-        UIManager.Instance.value.text = "Value: " + InventoryManager.Instance.items[slotNum].value;
-        UIManager.Instance.weight.text = "Weight: " + InventoryManager.Instance.items[slotNum].weight;
+        UIManager.Instance.itemValue.text = "Value: " + InventoryManager.Instance.items[slotNum].value;
+        UIManager.Instance.itemWeight.text = "Weight: " + InventoryManager.Instance.items[slotNum].weight;
+        UIManager.Instance.selectSlot = slotNum;
     }
 }
