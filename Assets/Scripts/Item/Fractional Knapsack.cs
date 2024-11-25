@@ -18,7 +18,7 @@ public class FractionalKnapsack : MonoBehaviour
         foreach (var item in selectedItems) {
             Debug.Log($"물건: {item.name}, 가치: {item.value}, 무게: {item.weight}");
         }
-        Debug.Log($"배낭 속 총 가치: {maxValue}");
+        Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
     }
 
     public (int maxValue, List<Item>) SolveKnapsack(List<Item> items, int limitWeight)
@@ -74,7 +74,7 @@ public class FractionalKnapsack : MonoBehaviour
             foreach (var item in selectedItems) {
                 Debug.Log($"물건: {item.name}, 가치: {item.value}, 무게: {item.weight}");
             }
-            Debug.Log($"배낭 속 총 가치: {maxValue}");
+            Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
         }
     }
 }
