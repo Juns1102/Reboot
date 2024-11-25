@@ -24,7 +24,7 @@ public class UIManager : Singleton<UIManager> {
         inventoryUI.SetActive(activeInventory);
     }
     
-    public void OnInventory(){
+    public void Inventory(){
         if(activeInventory){
             inventoryUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear).OnComplete(() => SetInventory());
         }
@@ -33,7 +33,7 @@ public class UIManager : Singleton<UIManager> {
             SetInventory();
             inventoryUI.GetComponent<CanvasGroup>().DOFade(1, fadeTime).SetEase(Ease.Linear);
         }
-        inventoryUI.SetActive(activeInventory);
+        //inventoryUI.SetActive(activeInventory);
     }
 
     private void SetInventory(){
