@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 704ee3153bd94b343a232cae96b9129d, type: 3}
-  m_Name: Item2
+  m_Name: ItemData 3
   m_EditorClassIdentifier: 
-  sprite: {fileID: 700974265, guid: f31dcce30889fc64c99864fb656e2713, type: 3}
-  name: trash
-  value: 40
-  weight: 20
+  sprite: {fileID: 0}
+  name: 
+  value: 74
+  weight: 28
