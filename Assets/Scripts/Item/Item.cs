@@ -1,16 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
     public ItemData data;
-    public int value;
-    public int weight;
 
     private void SetUp(ItemData data) {
         gameObject.name = data.name;
-        this.value = data.value;
-        this.weight = data.weight;
+        gameObject.GetComponent<SpriteRenderer>().sprite = data.sprite;
     }
 
     private void Awake() {
@@ -19,8 +15,14 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            InventoryManager.Instance.items.Add(gameObject);
-            gameObject.SetActive(false);
+            if (InventoryManager.Instance.CheckCapacity()) {
+                InventoryManager.Instance.items.Add(data);
+                gameObject.SetActive(false);
+                UIManager.Instance.ItemPlace();
+                InventoryManager.Instance.currentCapacity += data.weight;
+                InventoryManager.Instance.value += data.value;
+                UIManager.Instance.SetHeadInfo();
+            }
         }
     }
 }

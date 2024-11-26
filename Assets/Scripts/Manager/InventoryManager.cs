@@ -1,45 +1,64 @@
-using NUnit.Framework;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class InventoryManager : Singleton<InventoryManager> {
-    public List<GameObject> items = new List<GameObject>();
+    [SerializeField]
+    public int value;
+    public int capacity;
+    public int currentCapacity;
+    public List<ItemData> items = new List<ItemData>();
+
+    private void Awake() {
+        currentCapacity = 0;
+    }
 
     public void SortName()
     {
         QuickSort(items, 0, items.Count - 1, "name");
-        Debug.Log("이름 퀵소트");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
     }
+
     public void ReverseSortName()
     {
         QuickSort(items, 0, items.Count - 1, "name");
         ReverseList(items);
-        Debug.Log("이름 역순 퀵소트");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
     }
+
     public void SortValue()
     {
         QuickSort(items, 0, items.Count - 1, "value");
-        Debug.Log("가치 퀵소트");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
     }
+
     public void ReverseSortValue()
     {
         QuickSort(items, 0, items.Count - 1, "value");
         ReverseList(items);
-        Debug.Log("가치 역순 퀵소트");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
     }
+
     public void SortWeight()
     {
         QuickSort(items, 0, items.Count - 1, "weight");
-        Debug.Log("무게 퀵소트");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
     }
+
     public void ReverseSortWeight()
     {
         QuickSort(items, 0, items.Count - 1, "weight");
         ReverseList(items);
-        Debug.Log("무게 역순 퀵소트");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
     }
-    public void ReverseList(List<GameObject> list)
+
+    public void ReverseList(List<ItemData> list)
     {
         int left = 0;
         int right = list.Count - 1;
@@ -50,7 +69,8 @@ public class InventoryManager : Singleton<InventoryManager> {
             right--;
         }
     }
-    private void QuickSort(List<GameObject> list, int left, int right, string Type)
+
+    private void QuickSort(List<ItemData> list, int left, int right, string Type)
     {
         if (left < right) {
             int q = Partition(list, left, right, Type);
@@ -59,9 +79,9 @@ public class InventoryManager : Singleton<InventoryManager> {
         }
     }
 
-    private int Partition(List<GameObject> list, int left, int right, string Type)
+    private int Partition(List<ItemData> list, int left, int right, string Type)
     {
-        GameObject pivot = list[left];
+        ItemData pivot = list[left];
         int low = left;
         int high = right + 1;
 
@@ -84,10 +104,10 @@ public class InventoryManager : Singleton<InventoryManager> {
     }
 
 
-    private int Compare(GameObject a, GameObject b, string Type)
+    private int Compare(ItemData a, ItemData b, string Type)
     {
-        Item item1 = a.GetComponent<Item>();
-        Item item2 = b.GetComponent<Item>();
+        ItemData item1 = a;
+        ItemData item2 = b;
 
         switch (Type) {
             case "name":
@@ -98,6 +118,31 @@ public class InventoryManager : Singleton<InventoryManager> {
                 return item1.weight.CompareTo(item2.weight); 
             default:
                 return 0;
+        }
+    }
+
+    private void Swap(List<ItemData> list, int a, int b)
+    {
+        ItemData temp = list[a];
+        list[a] = list[b];
+        list[b] = temp;
+    }
+
+    public void GetHeadInfo(TextMeshProUGUI value, TextMeshProUGUI capacity) {
+        value.text = this.value.ToString();
+        capacity.text = currentCapacity + "/" + this.capacity;
+        capacity.color = currentCapacity > this.capacity ? Color.red : Color.white;
+    }
+
+    public bool CheckCapacity() {
+        return currentCapacity <= capacity;
+    }
+
+    public void RemoveItem(int num) {
+        if(num != -1) {
+            value -= items[num].value;
+            currentCapacity -= items[num].weight;
+            items.RemoveAt(num);
         }
     }
 
