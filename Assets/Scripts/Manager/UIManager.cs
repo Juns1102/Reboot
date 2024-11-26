@@ -17,6 +17,7 @@ public class UIManager : Singleton<UIManager> {
     public TextMeshProUGUI itemValue;
     public TextMeshProUGUI itemWeight;
     public Image itemImage;
+    public Image[] hearts;
 
     private void Start(){
         selectSlot = -1;
@@ -66,5 +67,11 @@ public class UIManager : Singleton<UIManager> {
         itemValue.text = "Value: ";
         itemWeight.text = "Weight: ";
         selectSlot = -1;
+    }
+
+    public void HeartsSet(){
+        hearts[0].gameObject.SetActive(GameManager.Instance.playerHearts >= 1);
+        hearts[1].gameObject.SetActive(GameManager.Instance.playerHearts >= 2);
+        hearts[2].gameObject.SetActive(GameManager.Instance.playerHearts >= 3);
     }
 }
