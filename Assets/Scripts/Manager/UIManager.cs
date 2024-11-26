@@ -11,12 +11,14 @@ public class UIManager : Singleton<UIManager> {
     public int selectSlot;
     public GameObject inventoryUI;
     public GameObject inventorySlots;
+    public TextMeshProUGUI HUDcapacity;
     public TextMeshProUGUI value;
     public TextMeshProUGUI capacity;
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemValue;
     public TextMeshProUGUI itemWeight;
     public Image itemImage;
+    public Image[] hearts;
 
     private void Start(){
         selectSlot = -1;
@@ -51,6 +53,7 @@ public class UIManager : Singleton<UIManager> {
 
     public void SetHeadInfo() {
         InventoryManager.Instance.GetHeadInfo(value, capacity);
+        InventoryManager.Instance.GetHeadInfo(value, HUDcapacity);
     }
 
     public void DropItem() {
@@ -66,5 +69,11 @@ public class UIManager : Singleton<UIManager> {
         itemValue.text = "Value: ";
         itemWeight.text = "Weight: ";
         selectSlot = -1;
+    }
+
+    public void HeartsSet(){
+        hearts[0].gameObject.SetActive(GameManager.Instance.playerHearts >= 1);
+        hearts[1].gameObject.SetActive(GameManager.Instance.playerHearts >= 2);
+        hearts[2].gameObject.SetActive(GameManager.Instance.playerHearts >= 3);
     }
 }
