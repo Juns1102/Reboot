@@ -24,22 +24,27 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void OnMove(InputValue value) {
-        if (InventoryManager.Instance.CheckCapacity()) {
+        if (InventoryManager.Instance.CheckCapacity() && anim.GetCurrentAnimatorStateInfo(0).IsName("Walk") != true) {
             if (Mathf.Abs(value.Get<Vector2>().x) == 1 || 
                 Mathf.Abs(value.Get<Vector2>().y) == 1) {
-                anim.SetFloat("Speed", 1);
+                anim.SetBool("Walk", true);
+                if(value.Get<Vector2>().x == 1){
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else if(value.Get<Vector2>().x == -1){
+                    gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
                 RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1, LayerMask.GetMask("Platform"));
                 if (moveStop && hit.collider == null) {
                     moveStop = false;
                     targetPos = value.Get<Vector2>();
-                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => SetMove());
+                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => moveStop = true);
                 }
             }
         }
     }
 
     private void SetMove(){
-        moveStop = true;
-        anim.SetFloat("Speed", 0);
+        anim.SetBool("Walk", false);
     }
 }

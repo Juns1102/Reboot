@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager> {
     public int selectSlot;
     public GameObject inventoryUI;
     public GameObject inventorySlots;
+    public TextMeshProUGUI HUDcapacity;
     public TextMeshProUGUI value;
     public TextMeshProUGUI capacity;
     public TextMeshProUGUI itemName;
@@ -52,6 +53,7 @@ public class UIManager : Singleton<UIManager> {
 
     public void SetHeadInfo() {
         InventoryManager.Instance.GetHeadInfo(value, capacity);
+        InventoryManager.Instance.GetHeadInfo(value, HUDcapacity);
     }
 
     public void DropItem() {
