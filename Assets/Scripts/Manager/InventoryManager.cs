@@ -145,21 +145,4 @@ public class InventoryManager : Singleton<InventoryManager> {
             items.RemoveAt(num);
         }
     }
-
-    private void Swap(List<GameObject> list, int a, int b)
-    {
-        GameObject temp = list[a];
-        list[a] = list[b];
-        list[b] = temp;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) SortName();
-        if (Input.GetKeyDown(KeyCode.Alpha2)) SortValue();
-        if (Input.GetKeyDown(KeyCode.Alpha3)) SortWeight();
-        if (Input.GetKeyDown(KeyCode.Alpha5)) ReverseSortName();
-        if (Input.GetKeyDown(KeyCode.Alpha6)) ReverseSortValue();
-        if (Input.GetKeyDown(KeyCode.Alpha7)) ReverseSortWeight();
-    }
 }
