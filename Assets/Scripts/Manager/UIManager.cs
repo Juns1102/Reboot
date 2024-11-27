@@ -10,6 +10,7 @@ public class UIManager : Singleton<UIManager> {
     private Slot[] slots;
     public int selectSlot;
     public GameObject inventoryUI;
+    public GameObject informationUI;
     public GameObject inventorySlots;
     public TextMeshProUGUI HUDcapacity;
     public TextMeshProUGUI value;
@@ -17,12 +18,15 @@ public class UIManager : Singleton<UIManager> {
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemValue;
     public TextMeshProUGUI itemWeight;
+    public TextMeshProUGUI planetName;
+    public TextMeshProUGUI maxValue;
     public Image itemImage;
     public Image[] hearts;
 
     private void Start(){
         selectSlot = -1;
         inventoryUI.GetComponent<CanvasGroup>().alpha = 0;
+        informationUI.GetComponent<CanvasGroup>().alpha = 0;
         slots = inventorySlots.GetComponentsInChildren<Slot>();
         activeInventory = false;
         inventoryUI.SetActive(activeInventory);
@@ -31,12 +35,20 @@ public class UIManager : Singleton<UIManager> {
     public void Inventory(){
         if(activeInventory){
             inventoryUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear).OnComplete(() => SetInventory());
+            informationUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear);
         }
         else{
             ItemPlace();
             SetInventory();
+            SetPlanetInfo();
             inventoryUI.GetComponent<CanvasGroup>().DOFade(1, fadeTime).SetEase(Ease.Linear);
+            informationUI.GetComponent<CanvasGroup>().DOFade(1, fadeTime).SetEase(Ease.Linear);
         }
+    }
+
+    private void SetPlanetInfo(){
+        planetName.text = "Planet: " + GameManager.Instance.planetName;
+        maxValue.text = "MaxValue: " + GameManager.Instance.maxValue;
     }
 
     private void SetInventory(){
