@@ -1,10 +1,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager> {
+public class GameManager : MonoBehaviour {
+    private static GameManager instance;
+
+    public static GameManager Instance{
+        get{
+            if(null == instance){
+                return null;
+            }
+            return instance;
+        }
+    }
+
+    private void Awake() {
+        if(instance == null){
+            instance = this;
+            if(transform.parent != null && transform.root != null){
+                DontDestroyOnLoad(this.transform.root.gameObject);
+            }
+            else{
+                DontDestroyOnLoad(this.gameObject);
+            }
+        }
+        else{
+            Destroy(this.gameObject);
+        }
+    }
+    
     [SerializeField]
     private bool playerTurn;
-    
+    private int tpNum;
+    private bool ableTP;
+    private bool inTp;
     public string planetName;
     public int playerHearts;
     public List<Item> fieldItems = new List<Item>();
@@ -15,6 +43,32 @@ public class GameManager : Singleton<GameManager> {
     private void Start() {
         playerHearts = 3;
         SolveKnapsack(fieldItems, limitWeight);
+    }
+
+    public void SetTp(bool moveStop){
+        this.ableTP = moveStop;
+    }
+
+    public void SetTp(int tpNum){
+        this.tpNum = tpNum;
+        inTp = tpNum == 0 ? true : false;
+    }
+
+    public void Teleport(){
+        if(ableTP){
+            if(tpNum == 1){
+                SceneChanger.Instance.ChangeMap1();
+            }
+            else if(tpNum == 2){
+                SceneChanger.Instance.ChangeMap2();
+            }
+            else if(tpNum == 3){
+                SceneChanger.Instance.ChangeMap3();
+            }
+            else if(tpNum == 4){
+                SceneChanger.Instance.ChangeMap4();
+            }
+        }
     }
 
     public void SolveKnapsack(List<Item> items, int limitWeight) {

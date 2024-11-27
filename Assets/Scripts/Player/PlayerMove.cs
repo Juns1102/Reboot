@@ -11,16 +11,12 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D body;
     //Animator anim;
     //SpriteRenderer spriter;
-
-    void Awake()
+    
+    void Start()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         moveStop = true;
-    }
-
-    private void FixedUpdate(){
-        Debug.DrawRay(body.position, Vector2. right, new Color(1, 0, 0));
     }
 
     private void OnMove(InputValue value) {
@@ -37,8 +33,9 @@ public class PlayerMove : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1, LayerMask.GetMask("Platform"));
                 if (moveStop && hit.collider == null) {
                     moveStop = false;
+                    GameManager.Instance.SetTp(moveStop);
                     targetPos = value.Get<Vector2>();
-                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => moveStop = true);
+                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {moveStop = true; GameManager.Instance.SetTp(moveStop);});
                 }
             }
         }

@@ -2,7 +2,33 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
-public class InventoryManager : Singleton<InventoryManager> {
+public class InventoryManager : MonoBehaviour {
+    private static InventoryManager instance;
+
+    public static InventoryManager Instance{
+        get{
+            if(null == instance){
+                return null;
+            }
+            return instance;
+        }
+    }
+
+    private void Awake() {
+        if(instance == null){
+            instance = this;
+            if(transform.parent != null && transform.root != null){
+                DontDestroyOnLoad(this.transform.root.gameObject);
+            }
+            else{
+                DontDestroyOnLoad(this.gameObject);
+            }
+        }
+        else{
+            Destroy(this.gameObject);
+        }
+    }
+
     [SerializeField]
     public int value;
     public int capacity;

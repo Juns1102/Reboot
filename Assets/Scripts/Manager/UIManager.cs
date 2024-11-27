@@ -3,9 +3,36 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
 
-public class UIManager : Singleton<UIManager> {
+public class UIManager : MonoBehaviour {
+    private static UIManager instance;
+
+    public static UIManager Instance{
+        get{
+            if(null == instance){
+                return null;
+            }
+            return instance;
+        }
+    }
+
+    private void Awake() {
+        if(instance == null){
+            instance = this;
+            if(transform.parent != null && transform.root != null){
+                DontDestroyOnLoad(this.transform.root.gameObject);
+            }
+            else{
+                DontDestroyOnLoad(this.gameObject);
+            }
+        }
+        else{
+            Destroy(this.gameObject);
+        }
+    }
+
     [SerializeField]
     float fadeTime;
+
     private bool activeInventory;
     private Slot[] slots;
     public int selectSlot;
