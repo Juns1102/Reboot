@@ -13,24 +13,17 @@ public class InventoryManager : Singleton<InventoryManager> {
         currentCapacity = 0;
     }
 
-    public void SortName()
-    {
-        QuickSort(items, 0, items.Count - 1, "name");
-        UIManager.Instance.ItemPlace();
-        UIManager.Instance.BottumInfoReset();
-    }
-
     public void ReverseSortName()
     {
         QuickSort(items, 0, items.Count - 1, "name");
-        ReverseList(items);
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
     }
 
-    public void SortValue()
+    public void SortName()
     {
-        QuickSort(items, 0, items.Count - 1, "value");
+        QuickSort(items, 0, items.Count - 1, "name");
+        ReverseList(items);
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
     }
@@ -38,19 +31,26 @@ public class InventoryManager : Singleton<InventoryManager> {
     public void ReverseSortValue()
     {
         QuickSort(items, 0, items.Count - 1, "value");
+        UIManager.Instance.ItemPlace();
+        UIManager.Instance.BottumInfoReset();
+    }
+
+    public void SortValue()
+    {
+        QuickSort(items, 0, items.Count - 1, "value");
         ReverseList(items);
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
     }
 
-    public void SortWeight()
+    public void ReverseSortWeight()
     {
         QuickSort(items, 0, items.Count - 1, "weight");
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
     }
 
-    public void ReverseSortWeight()
+    public void SortWeight()
     {
         QuickSort(items, 0, items.Count - 1, "weight");
         ReverseList(items);
