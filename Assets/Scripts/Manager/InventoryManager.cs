@@ -9,7 +9,7 @@ public class InventoryManager : Singleton<InventoryManager> {
     public int currentCapacity;
     public List<ItemData> items = new List<ItemData>();
 
-    private void Awake() {
+    private void Start() {
         currentCapacity = 0;
     }
 
