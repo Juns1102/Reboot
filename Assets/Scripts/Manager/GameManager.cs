@@ -5,19 +5,24 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField]
     private bool playerTurn;
     
-    public string planetName;
     public int playerHearts;
     public List<Item> fieldItems = new List<Item>();
-    public List<Item> selectedItems = new List<Item>();
     public int limitWeight;  
-    public int maxValue;
 
-    private void Start() {
+    private void Start()
+    {
         playerHearts = 3;
-        SolveKnapsack(fieldItems, limitWeight);
+        (int maxValue, List<Item> selectedItems) = SolveKnapsack(fieldItems, limitWeight);
+        
+        // Debug.Log("선택된 물건");
+        // foreach (var item in selectedItems) {
+        //     Debug.Log($"물건: {item.data.name}, 가치: {item.data.value}, 무게: {item.data.weight}");
+        // }
+        // Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
     }
 
-    public void SolveKnapsack(List<Item> items, int limitWeight) {
+    public (int maxValue, List<Item>) SolveKnapsack(List<Item> items, int limitWeight)
+    {
         int n = items.Count;
 
         int[,] K = new int[n + 1, limitWeight + 1];
@@ -47,6 +52,7 @@ public class GameManager : Singleton<GameManager> {
             }
         }
 
+        List<Item> selectedItems = new List<Item>();
         int remain = limitWeight;
 
         for (int i = n; i > 0 && remain > 0; i--) {
@@ -55,7 +61,8 @@ public class GameManager : Singleton<GameManager> {
                 remain -= items[i - 1].data.weight;
             }
         }
-        maxValue = K[n, limitWeight];
+
+        return (K[n, limitWeight], selectedItems);
     }
 
     public bool turnCheck() {
@@ -66,16 +73,16 @@ public class GameManager : Singleton<GameManager> {
         playerTurn = !playerTurn;
     }
 
-    // public void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Alpha4)) {
-    //         (int maxValue, List<Item> selectedItems) = SolveKnapsack(fieldItems, limitWeight);
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            (int maxValue, List<Item> selectedItems) = SolveKnapsack(fieldItems, limitWeight);
 
-    //         Debug.Log("선택된 물건");
-    //         foreach (var item in selectedItems) {
-    //             Debug.Log($"물건: {item.name}, 가치: {item.data.value}, 무게: {item.data.weight}");
-    //         }
-    //         Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
-    //     }
-    // }
+            Debug.Log("선택된 물건");
+            foreach (var item in selectedItems) {
+                Debug.Log($"물건: {item.name}, 가치: {item.data.value}, 무게: {item.data.weight}");
+            }
+            Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
+        }
+    }
 }
