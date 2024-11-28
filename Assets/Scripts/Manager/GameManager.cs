@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
     }
     
     [SerializeField]
-    private bool playerTurn;
+    public bool playerTurn;
     private int tpNum;
     private bool ableTP;
     private bool inTp;
