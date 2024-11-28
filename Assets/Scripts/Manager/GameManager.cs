@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager> {
     [SerializeField]
-    private bool playerTurn;
+    public bool playerTurn;
     
     public string planetName;
     public int playerHearts;
