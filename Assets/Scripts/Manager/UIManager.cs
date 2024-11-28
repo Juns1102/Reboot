@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour {
         slots = inventorySlots.GetComponentsInChildren<Slot>();
         activeInventory = false;
         inventoryUI.SetActive(activeInventory);
+        informationUI.SetActive(activeInventory);
     }
     
     public void Inventory(){
@@ -82,6 +83,7 @@ public class UIManager : MonoBehaviour {
         activeInventory = !activeInventory;
         SetHeadInfo();
         inventoryUI.SetActive(activeInventory);
+        informationUI.SetActive(activeInventory);
     }
 
     public void ItemPlace(){

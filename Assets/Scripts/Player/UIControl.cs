@@ -6,7 +6,6 @@ public class UIControl : MonoBehaviour
         UIManager.Instance.Inventory();
     }
     private void OnInteract(){
-        Debug.Log("asasdf");
         GameManager.Instance.Teleport();
     }
 }
