@@ -4543,7 +4543,7 @@ GameObject:
   - component: {fileID: 1415401269}
   - component: {fileID: 1415401268}
   - component: {fileID: 1415401270}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
