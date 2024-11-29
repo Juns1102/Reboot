@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    #region Singleton
     private static GameManager instance;
 
     public static GameManager Instance{
@@ -27,12 +28,20 @@ public class GameManager : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+    #endregion
     
     [SerializeField]
-    public bool playerTurn;
     private int tpNum;
     private bool ableTP;
     private bool inTp;
+    [SerializeField]
+    private int skill1MaxCoolTime;
+    [SerializeField]
+    private int skill2MaxCoolTime;
+    private int skill1CoolTime;
+    private int skill2CoolTime;
+    public bool activeSkill;
+    public bool playerTurn;
     public string planetName;
     public int playerHearts;
     public List<Item> fieldItems = new List<Item>();
@@ -43,6 +52,16 @@ public class GameManager : MonoBehaviour {
     private void Start() {
         playerHearts = 3;
         SolveKnapsack(fieldItems, limitWeight);
+    }
+
+    public void Skill1Set(){
+        activeSkill = false;
+        skill1CoolTime = skill1MaxCoolTime;
+    }
+
+    public void Skill2Set(){
+        activeSkill = false;
+        skill2CoolTime = skill2MaxCoolTime;
     }
 
     public void SetTp(bool moveStop){

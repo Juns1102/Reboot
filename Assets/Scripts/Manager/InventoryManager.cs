@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 
 public class InventoryManager : MonoBehaviour {
+    #region Singleton
     private static InventoryManager instance;
 
     public static InventoryManager Instance{
@@ -28,6 +29,7 @@ public class InventoryManager : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+    #endregion
 
     [SerializeField]
     public int value;

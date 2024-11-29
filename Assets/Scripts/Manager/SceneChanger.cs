@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour {
+    #region Singleton
     private static SceneChanger instance;
 
     public static SceneChanger Instance{
@@ -27,6 +28,8 @@ public class SceneChanger : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+    #endregion
+
     public void ChangeMap1(){
         SceneManager.LoadScene(0);
     }

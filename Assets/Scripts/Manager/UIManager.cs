@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
+    #region Singleton
     private static UIManager instance;
 
     public static UIManager Instance{
@@ -29,6 +30,7 @@ public class UIManager : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+    #endregion
 
     [SerializeField]
     float fadeTime;
