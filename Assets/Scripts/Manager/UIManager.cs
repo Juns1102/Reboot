@@ -51,6 +51,9 @@ public class UIManager : MonoBehaviour {
     public TextMeshProUGUI maxValue;
     public Image itemImage;
     public Image[] hearts;
+    public Image skill1Cool;
+    public Image skill2Cool;
+    public Image skill2Panel;
 
     private void Start(){
         selectSlot = -1;
@@ -62,6 +65,18 @@ public class UIManager : MonoBehaviour {
         informationUI.SetActive(activeInventory);
     }
     
+    public void EquipTp(){
+        skill2Panel.color = new Color(255/255, 255/255, (float)206/255, 255/255);
+    }
+    public void UseTp(){
+        skill2Panel.color = new Color(255/255, 255/255, 255/255, (float)100/255);
+    }
+
+    public void SetCoolTime(){
+        skill1Cool.fillAmount = GameManager.Instance.skill1CoolTime / GameManager.Instance.skill1MaxCoolTime;
+        skill2Cool.fillAmount = GameManager.Instance.skill2CoolTime / GameManager.Instance.skill2MaxCoolTime;
+    }
+
     public void Inventory(){
         if(activeInventory){
             inventoryUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear).OnComplete(() => SetInventory());

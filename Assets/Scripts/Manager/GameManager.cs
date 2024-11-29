@@ -34,12 +34,11 @@ public class GameManager : MonoBehaviour {
     private int tpNum;
     private bool ableTP;
     private bool inTp;
-    [SerializeField]
-    private int skill1MaxCoolTime;
-    [SerializeField]
-    private int skill2MaxCoolTime;
-    private int skill1CoolTime;
-    private int skill2CoolTime;
+    public float skill1MaxCoolTime;
+    public float skill2MaxCoolTime;
+    public float skill1CoolTime;
+    public float skill2CoolTime;
+    public bool equipTp;
     public bool activeSkill;
     public bool playerTurn;
     public string planetName;
@@ -62,6 +61,15 @@ public class GameManager : MonoBehaviour {
     public void Skill2Set(){
         activeSkill = false;
         skill2CoolTime = skill2MaxCoolTime;
+    }
+
+    public void SkillCoolDown(){
+        if(skill1CoolTime > 0){
+            skill1CoolTime--;
+        }
+        if(skill2CoolTime > 0){
+            skill2CoolTime--;
+        }
     }
 
     public void SetTp(bool moveStop){

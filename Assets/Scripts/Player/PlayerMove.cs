@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
                     moveStop = false;
                     GameManager.Instance.SetTp(moveStop);
                     targetPos = value.Get<Vector2>();
-                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {GameManager.Instance.SetTp(moveStop);});
+                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {SetMove(); GameManager.Instance.SetTp(moveStop);});
                 }
             }
         }
@@ -50,5 +50,9 @@ public class PlayerMove : MonoBehaviour
 
     private void SetMove(){
         anim.SetBool("Walk", false);
+        moveStop = true;
+        GameManager.Instance.activeSkill = true;
+        GameManager.Instance.SkillCoolDown();
+        UIManager.Instance.SetCoolTime();
     }
 }
