@@ -11,7 +11,8 @@ public class MonsterMove : MonoBehaviour {
     Vector2 playerPos; //플레이어 좌표
     Vector2 myPos; //몬스터 좌표
     int[][] weight; //가중치 배열
-    
+    List<Vector2> vectorList;
+    Vector2 vector;
 
     //먼저 주변 맵 정보를 수집
     //수집한 정보를 토대로 길 찾기
@@ -20,100 +21,132 @@ public class MonsterMove : MonoBehaviour {
     //플레이어, 몬스터 사이 범위 맵 정보 수집
     void GetMapInfo() {
         Array.Clear(weight, 0, weight.Length); //가중치 배열 초기화(움직일 때마다 범위, 값 바껴서 초기화 해줘야함)
-        float xDistance = Mathf.Abs(myPos.x - playerPos.x); //플레이어 - 몬스터 x거리
-        float yDistance = Mathf.Abs(myPos.y - playerPos.y); //플레이어 - 몬스터 y거리
+        int xDistance = (int)(myPos.x - playerPos.x); //몬스터 - 플레이어 x거리
+        int yDistance = (int)(myPos.y - playerPos.y); //몬스터 - 플레이어 y거리
+
         RaycastHit2D hit; //레이어 확인 변수
 
-        for(int i = 0; i < xDistance; i++) {
-            for(int j = 0; j < yDistance; j++) {
-                hit = Physics2D.Raycast(myPos, myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
-                if(hit.collider == null) { //평지(가중치 1)일 경우
-                    weight[i][j] = 1;
-                }
-                else { //장애물(가중치 INF) 존재할 경우
-                    weight[i][j] = INF;
-                }
-            }
-        }
-    }
-
-    //수평 이동(x좌표, y좌표, 가중치 합, 최소 가중치)
-    int MoveHorizontal(int x, int y, int distance, int minWeight) {
-        //가중치 합 < 최소라면 ㄱㄱ
-        if(distance < minWeight) {
-            if(myPos.x < playerPos.x) {
-                MoveHorizontal(x + 1, y, distance + weight[y][x], minWeight);
-            }
-            else if(myPos.x > playerPos.x) {
-                MoveHorizontal(x - 1, y, distance + weight[y][weight[y].Length - x], minWeight);
-            }
-            else {
-                return distance;
-            }
-        }
-
-		return minWeight; //가중치 합 >= 최소인 경우
-    }
-
-    int MoveVertical(int x, int y, int distance, int minWeight) {
-        if(distance < minWeight) {
-			if(myPos.y < playerPos.y) {
-                MoveVertical(x, y - 1, distance + weight[weight.Length - y][x], minWeight);
-            }
-            else if(myPos.y > playerPos.y) {
-                MoveVertical(x, y + 1, distance + weight[y][x], minWeight);
-            }
-            else {
-                return distance;
-            }
-		}
-
-        return minWeight;
-    }
-
-    int Dfs(int x, int y, int distance, int minWeight) {
-        if(distance < minWeight) {
-			if (myPos.x < playerPos.x) {
-				Dfs(x + 1, y, distance + weight[x][y], minWeight);
+        if(yDistance == 0) { //x축
+			for (int x = 0; x < Mathf.Abs(xDistance); x++) {
+				hit = Physics2D.Raycast(myPos + new Vector2(xDistance > 0 ? -x : x, 0), myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
+				if (hit.collider == null) { //평지(가중치 1)일 경우
+					weight[0][x] = 1;
+				}
+				else { //장애물(가중치 INF) 존재할 경우
+					weight[0][x] = INF;
+				}
 			}
-            else if(myPos.x > playerPos.x) {
-                Dfs(x - 1, y, distance + weight[x][y], minWeight);
-            }
-            else if(myPos.y < playerPos.y) {
-
-            }
-
 		}
-        
+        else if(xDistance == 0) { //y축
+			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
+				hit = Physics2D.Raycast(myPos + new Vector2(0, yDistance > 0 ? -y : y), myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
+				if (hit.collider == null) { //평지(가중치 1)일 경우
+					weight[y][0] = 1;
+				}
+				else { //장애물(가중치 INF) 존재할 경우
+					weight[y][0] = INF;
+				}
+			}
+		}
+        else if(xDistance < 0 && yDistance < 0) { //제 1사분면
+            for (int y = 0; y < Mathf.Abs(yDistance); y++) {
+                for(int x = 0; x < Mathf.Abs(xDistance); x++) {
+					hit = Physics2D.Raycast(myPos + new Vector2(x, y), myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
+					if (hit.collider == null) { //평지(가중치 1)일 경우
+                        weight[y][x] = 1;
+					}
+					else { //장애물(가중치 INF) 존재할 경우
+                        weight[y][x] = INF;
+					}
+				}
+            }
+        }
+        else if(xDistance > 0 && yDistance < 0) { //제 2사분면
+			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
+				for (int x = 0; x < Mathf.Abs(xDistance); x++) {
+					hit = Physics2D.Raycast(myPos + new Vector2(-x, y), myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
+					if (hit.collider == null) { //평지(가중치 1)일 경우
+                        weight[y][x] = 1;
+					}
+					else { //장애물(가중치 INF) 존재할 경우
+                        weight[y][x] = INF;
+					}
+				}
+			}
+		}
+        else if(xDistance > 0 && yDistance > 0) { //제 3사분면
+			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
+				for (int x = 0; x < Mathf.Abs(xDistance); x++) {
+					hit = Physics2D.Raycast(myPos + new Vector2(-x, -y), myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
+					if (hit.collider == null) { //평지(가중치 1)일 경우
+                        weight[y][x] = 1;
+					}
+					else { //장애물(가중치 INF) 존재할 경우
+                        weight[y][x] = INF;
+					}
+				}
+			}
+		}
+        else if(xDistance < 0 && yDistance > 0) { //제 4사분면
+			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
+				for (int x = 0; x < Mathf.Abs(xDistance); x++) {
+					hit = Physics2D.Raycast(myPos + new Vector2(x, -y), myPos, LayerMask.GetMask("Platform")); //현재 위치 레이어 확인
+					if (hit.collider == null) { //평지(가중치 1)일 경우
+						weight[y][x] = 1;
+					}
+					else { //장애물(가중치 INF) 존재할 경우
+						weight[y][x] = INF;
+					}
+				}
+			}
+		}
+    }
+
+    int Dfs(int x, int y, int distance, ref int minWeight) {
+        if(distance < minWeight) {
+			if(x < weight[y].Length - 1) { //수평 이동
+                vectorList.Add(new Vector2(1, 0));
+				distance = Dfs(x + 1, y, distance + weight[y][x], ref minWeight);
+            }
+            if(y < weight.Length - 1) { //수직 이동
+                vectorList.Add(new Vector2(0, 1));
+				distance = Dfs(x, y + 1, distance + weight[y][x], ref minWeight);
+            }
+
+            if(distance < minWeight) {
+                minWeight = distance;
+                vector = vectorList[0];
+            }
+            vectorList.RemoveAt(vectorList.Count - 1);
+		}
+
         return distance;
     }
 
     Vector2 Chasing() {
 		int minWeight = INF;
+        int distance = 0;
+
 		//초기화
 		GetMapInfo();
 
-        Dfs((int)myPos.x, (int)myPos.y, 0, minWeight);
+        distance = Dfs(0, 0, 0, ref minWeight);
+        Debug.Log("Shortest: " + distance); //최단 거리 확인용 로그 출력
 
-        return myPos; //임시 반환
+        return vector;
     }
 
 	void Wandering() {
     }
 
     void Move() {
-        myPos = this.transform.position;
+		playerPos = GameObject.Find("TestPlayer").transform.position;
+		myPos = this.transform.position;
         if(Vector2.Distance(myPos, playerPos) <= 5) { //플레이어 - 몬스터 거리 5 이하면
             Chasing(); //플레이어 추격
         }
         else {
             Wandering(); //랜덤 이동
         }
-    }
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() {
-        playerPos = GameObject.Find("TestPlayer").transform.position;
-        myPos = this.transform.position;
     }
 }
