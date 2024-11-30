@@ -8,6 +8,8 @@ public class PlayerSkill : MonoBehaviour
     PlayerMove pm;
     CircleCollider2D ccd;
     Vector2 tpPos;
+    GameObject tpStone;
+    public GameObject tpStonePrefab;
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -29,6 +31,8 @@ public class PlayerSkill : MonoBehaviour
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill){
             if(GameManager.Instance.skill2CoolTime == 0){
                 if(!GameManager.Instance.equipTp){
+                    tpStone = Instantiate(tpStonePrefab, gameObject.transform);
+                    tpStone.transform.SetParent(null);
                     GameManager.Instance.equipTp = true;
                     UIManager.Instance.EquipTp();
                     tpPos = new Vector2(transform.position.x, transform.position.y);
@@ -54,7 +58,7 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void TpStep3(){
-        transform.DOMove((Vector2)transform.position + new Vector2(0, -0.5f), 0.5f).SetEase(Ease.OutQuad).OnComplete(() => ccd.enabled = true);
+        transform.DOMove((Vector2)transform.position + new Vector2(0, -0.5f), 0.5f).SetEase(Ease.OutQuad).OnComplete(() => {ccd.enabled = true; Destroy(tpStone);});
     }
 
     private void OnTurnEnd(){
