@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using Mono.Cecil;
 
 public class MonsterMove : MonoBehaviour {
     const int INF = 10000;
@@ -36,40 +37,63 @@ public class MonsterMove : MonoBehaviour {
         }
     }
 
-    int MoveHorizontal(int x, int minWeight) {
+    //수평 이동(x좌표, y좌표, 가중치 합, 최소 가중치)
+    int MoveHorizontal(int x, int y, int distance, int minWeight) {
         //가중치 합 < 최소라면 ㄱㄱ
-        if(x < playerPos.x) {
-            MoveHorizontal(x + 1, minWeight);
-        }
-        else if(x > playerPos.x) {
-            MoveHorizontal(x - 1, minWeight);
+        if(distance < minWeight) {
+            if(myPos.x < playerPos.x) {
+                MoveHorizontal(x + 1, y, distance + weight[y][x], minWeight);
+            }
+            else if(myPos.x > playerPos.x) {
+                MoveHorizontal(x - 1, y, distance + weight[y][weight[y].Length - x], minWeight);
+            }
+            else {
+                return distance;
+            }
         }
 
-        return weight[x][x]; //임시 반환
+		return minWeight; //가중치 합 >= 최소인 경우
     }
 
-    void MoveVertical(int y, int minWeight) {
-        if(y < playerPos.y) {
+    int MoveVertical(int x, int y, int distance, int minWeight) {
+        if(distance < minWeight) {
+			if(myPos.y < playerPos.y) {
+                MoveVertical(x, y - 1, distance + weight[weight.Length - y][x], minWeight);
+            }
+            else if(myPos.y > playerPos.y) {
+                MoveVertical(x, y + 1, distance + weight[y][x], minWeight);
+            }
+            else {
+                return distance;
+            }
+		}
+
+        return minWeight;
+    }
+
+    int Dfs(int x, int y, int distance, int minWeight) {
+        if(distance < minWeight) {
+			if (myPos.x < playerPos.x) {
+				Dfs(x + 1, y, distance + weight[x][y], minWeight);
+			}
+            else if(myPos.x > playerPos.x) {
+                Dfs(x - 1, y, distance + weight[x][y], minWeight);
+            }
+            else if(myPos.y < playerPos.y) {
+
+            }
+
+		}
         
-        }
-        else if(y > playerPos.y) {
-
-        }
-        else {
-            return;
-        }
-    }
-
-    void Dfs() {
-        MoveHorizontal((int)myPos.x, INF);
-        MoveVertical((int)myPos.y, INF);
+        return distance;
     }
 
     Vector2 Chasing() {
-        //초기화
-        GetMapInfo();
+		int minWeight = INF;
+		//초기화
+		GetMapInfo();
 
-        Dfs();
+        Dfs((int)myPos.x, (int)myPos.y, 0, minWeight);
 
         return myPos; //임시 반환
     }
