@@ -8,93 +8,93 @@ using Mono.Cecil;
 
 public class MonsterMove : MonoBehaviour {
     const int INF = 10000;
-    Vector2 playerPos; //ÇÃ·¹ÀÌ¾î ÁÂÇ¥
-    Vector2 myPos; //¸ó½ºÅÍ ÁÂÇ¥
-    int[][] weight; //°¡ÁßÄ¡ ¹è¿­
-    List<Vector2> vectorList;
-    Vector2 vector;
+    public Vector2 playerPos; //í”Œë ˆì´ì–´ ì¢Œí‘œ
+    public Vector2 myPos; //ëª¬ìŠ¤í„° ì¢Œí‘œ
+    public int[][] weight; //ê°€ì¤‘ì¹˜ ë°°ì—´
+    public List<Vector2> vectorList;
+    public Vector2 vector;
 
-    //¸ÕÀú ÁÖº¯ ¸Ê Á¤º¸¸¦ ¼öÁı
-    //¼öÁıÇÑ Á¤º¸¸¦ Åä´ë·Î ±æ Ã£±â
-    //ÃÖ¼Ò °æ·Î ÃßÀû
+    //ë¨¼ì € ì£¼ë³€ ë§µ ì •ë³´ë¥¼ ìˆ˜ì§‘
+    //ìˆ˜ì§‘í•œ ì •ë³´ë¥¼ í† ëŒ€ë¡œ ê¸¸ ì°¾ê¸°
+    //ìµœì†Œ ê²½ë¡œ ì¶”ì 
 
-    //ÇÃ·¹ÀÌ¾î, ¸ó½ºÅÍ »çÀÌ ¹üÀ§ ¸Ê Á¤º¸ ¼öÁı
+    //í”Œë ˆì´ì–´, ëª¬ìŠ¤í„° ì‚¬ì´ ë²”ìœ„ ë§µ ì •ë³´ ìˆ˜ì§‘
     void GetMapInfo() {
-        Array.Clear(weight, 0, weight.Length); //°¡ÁßÄ¡ ¹è¿­ ÃÊ±âÈ­(¿òÁ÷ÀÏ ¶§¸¶´Ù ¹üÀ§, °ª ¹Ù²¸¼­ ÃÊ±âÈ­ ÇØÁà¾ßÇÔ)
-        int xDistance = (int)(myPos.x - playerPos.x); //¸ó½ºÅÍ - ÇÃ·¹ÀÌ¾î x°Å¸®
-        int yDistance = (int)(myPos.y - playerPos.y); //¸ó½ºÅÍ - ÇÃ·¹ÀÌ¾î y°Å¸®
+        Array.Clear(weight, 0, weight.Length); //ê°€ì¤‘ì¹˜ ë°°ì—´ ì´ˆê¸°í™”(ì›€ì§ì¼ ë•Œë§ˆë‹¤ ë²”ìœ„, ê°’ ë°”ê»´ì„œ ì´ˆê¸°í™” í•´ì¤˜ì•¼í•¨)
+        int xDistance = (int)(myPos.x - playerPos.x); //ëª¬ìŠ¤í„° - í”Œë ˆì´ì–´ xê±°ë¦¬
+        int yDistance = (int)(myPos.y - playerPos.y); //ëª¬ìŠ¤í„° - í”Œë ˆì´ì–´ yê±°ë¦¬
 
-        RaycastHit2D hit; //·¹ÀÌ¾î È®ÀÎ º¯¼ö
+        RaycastHit2D hit; //ë ˆì´ì–´ í™•ì¸ ë³€ìˆ˜
 
-        if(yDistance == 0) { //xÃà
+        if(yDistance == 0) { //xì¶•
 			for (int x = 0; x < Mathf.Abs(xDistance); x++) {
-				hit = Physics2D.Raycast(myPos + new Vector2(xDistance > 0 ? -x : x, 0), myPos, LayerMask.GetMask("Platform")); //ÇöÀç À§Ä¡ ·¹ÀÌ¾î È®ÀÎ
-				if (hit.collider == null) { //ÆòÁö(°¡ÁßÄ¡ 1)ÀÏ °æ¿ì
+				hit = Physics2D.Raycast(myPos + new Vector2(xDistance > 0 ? -x : x, 0), myPos, LayerMask.GetMask("Platform")); //í˜„ì¬ ìœ„ì¹˜ ë ˆì´ì–´ í™•ì¸
+				if (hit.collider == null) { //í‰ì§€(ê°€ì¤‘ì¹˜ 1)ì¼ ê²½ìš°
 					weight[0][x] = 1;
 				}
-				else { //Àå¾Ö¹°(°¡ÁßÄ¡ INF) Á¸ÀçÇÒ °æ¿ì
+				else { //ì¥ì• ë¬¼(ê°€ì¤‘ì¹˜ INF) ì¡´ì¬í•  ê²½ìš°
 					weight[0][x] = INF;
 				}
 			}
 		}
-        else if(xDistance == 0) { //yÃà
+        else if(xDistance == 0) { //yì¶•
 			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
-				hit = Physics2D.Raycast(myPos + new Vector2(0, yDistance > 0 ? -y : y), myPos, LayerMask.GetMask("Platform")); //ÇöÀç À§Ä¡ ·¹ÀÌ¾î È®ÀÎ
-				if (hit.collider == null) { //ÆòÁö(°¡ÁßÄ¡ 1)ÀÏ °æ¿ì
+				hit = Physics2D.Raycast(myPos + new Vector2(0, yDistance > 0 ? -y : y), myPos, LayerMask.GetMask("Platform")); //í˜„ì¬ ìœ„ì¹˜ ë ˆì´ì–´ í™•ì¸
+				if (hit.collider == null) { //í‰ì§€(ê°€ì¤‘ì¹˜ 1)ì¼ ê²½ìš°
 					weight[y][0] = 1;
 				}
-				else { //Àå¾Ö¹°(°¡ÁßÄ¡ INF) Á¸ÀçÇÒ °æ¿ì
+				else { //ì¥ì• ë¬¼(ê°€ì¤‘ì¹˜ INF) ì¡´ì¬í•  ê²½ìš°
 					weight[y][0] = INF;
 				}
 			}
 		}
-        else if(xDistance < 0 && yDistance < 0) { //Á¦ 1»çºĞ¸é
+        else if(xDistance < 0 && yDistance < 0) { //ì œ 1ì‚¬ë¶„ë©´
             for (int y = 0; y < Mathf.Abs(yDistance); y++) {
                 for(int x = 0; x < Mathf.Abs(xDistance); x++) {
-					hit = Physics2D.Raycast(myPos + new Vector2(x, y), myPos, LayerMask.GetMask("Platform")); //ÇöÀç À§Ä¡ ·¹ÀÌ¾î È®ÀÎ
-					if (hit.collider == null) { //ÆòÁö(°¡ÁßÄ¡ 1)ÀÏ °æ¿ì
+					hit = Physics2D.Raycast(myPos + new Vector2(x, y), myPos, LayerMask.GetMask("Platform")); //í˜„ì¬ ìœ„ì¹˜ ë ˆì´ì–´ í™•ì¸
+					if (hit.collider == null) { //í‰ì§€(ê°€ì¤‘ì¹˜ 1)ì¼ ê²½ìš°
                         weight[y][x] = 1;
 					}
-					else { //Àå¾Ö¹°(°¡ÁßÄ¡ INF) Á¸ÀçÇÒ °æ¿ì
+					else { //ì¥ì• ë¬¼(ê°€ì¤‘ì¹˜ INF) ì¡´ì¬í•  ê²½ìš°
                         weight[y][x] = INF;
 					}
 				}
             }
         }
-        else if(xDistance > 0 && yDistance < 0) { //Á¦ 2»çºĞ¸é
+        else if(xDistance > 0 && yDistance < 0) { //ì œ 2ì‚¬ë¶„ë©´
 			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
 				for (int x = 0; x < Mathf.Abs(xDistance); x++) {
-					hit = Physics2D.Raycast(myPos + new Vector2(-x, y), myPos, LayerMask.GetMask("Platform")); //ÇöÀç À§Ä¡ ·¹ÀÌ¾î È®ÀÎ
-					if (hit.collider == null) { //ÆòÁö(°¡ÁßÄ¡ 1)ÀÏ °æ¿ì
+					hit = Physics2D.Raycast(myPos + new Vector2(-x, y), myPos, LayerMask.GetMask("Platform")); //í˜„ì¬ ìœ„ì¹˜ ë ˆì´ì–´ í™•ì¸
+					if (hit.collider == null) { //í‰ì§€(ê°€ì¤‘ì¹˜ 1)ì¼ ê²½ìš°
                         weight[y][x] = 1;
 					}
-					else { //Àå¾Ö¹°(°¡ÁßÄ¡ INF) Á¸ÀçÇÒ °æ¿ì
+					else { //ì¥ì• ë¬¼(ê°€ì¤‘ì¹˜ INF) ì¡´ì¬í•  ê²½ìš°
                         weight[y][x] = INF;
 					}
 				}
 			}
 		}
-        else if(xDistance > 0 && yDistance > 0) { //Á¦ 3»çºĞ¸é
+        else if(xDistance > 0 && yDistance > 0) { //ì œ 3ì‚¬ë¶„ë©´
 			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
 				for (int x = 0; x < Mathf.Abs(xDistance); x++) {
-					hit = Physics2D.Raycast(myPos + new Vector2(-x, -y), myPos, LayerMask.GetMask("Platform")); //ÇöÀç À§Ä¡ ·¹ÀÌ¾î È®ÀÎ
-					if (hit.collider == null) { //ÆòÁö(°¡ÁßÄ¡ 1)ÀÏ °æ¿ì
+					hit = Physics2D.Raycast(myPos + new Vector2(-x, -y), myPos, LayerMask.GetMask("Platform")); //í˜„ì¬ ìœ„ì¹˜ ë ˆì´ì–´ í™•ì¸
+					if (hit.collider == null) { //í‰ì§€(ê°€ì¤‘ì¹˜ 1)ì¼ ê²½ìš°
                         weight[y][x] = 1;
 					}
-					else { //Àå¾Ö¹°(°¡ÁßÄ¡ INF) Á¸ÀçÇÒ °æ¿ì
+					else { //ì¥ì• ë¬¼(ê°€ì¤‘ì¹˜ INF) ì¡´ì¬í•  ê²½ìš°
                         weight[y][x] = INF;
 					}
 				}
 			}
 		}
-        else if(xDistance < 0 && yDistance > 0) { //Á¦ 4»çºĞ¸é
+        else if(xDistance < 0 && yDistance > 0) { //ì œ 4ì‚¬ë¶„ë©´
 			for (int y = 0; y < Mathf.Abs(yDistance); y++) {
 				for (int x = 0; x < Mathf.Abs(xDistance); x++) {
-					hit = Physics2D.Raycast(myPos + new Vector2(x, -y), myPos, LayerMask.GetMask("Platform")); //ÇöÀç À§Ä¡ ·¹ÀÌ¾î È®ÀÎ
-					if (hit.collider == null) { //ÆòÁö(°¡ÁßÄ¡ 1)ÀÏ °æ¿ì
+					hit = Physics2D.Raycast(myPos + new Vector2(x, -y), myPos, LayerMask.GetMask("Platform")); //í˜„ì¬ ìœ„ì¹˜ ë ˆì´ì–´ í™•ì¸
+					if (hit.collider == null) { //í‰ì§€(ê°€ì¤‘ì¹˜ 1)ì¼ ê²½ìš°
 						weight[y][x] = 1;
 					}
-					else { //Àå¾Ö¹°(°¡ÁßÄ¡ INF) Á¸ÀçÇÒ °æ¿ì
+					else { //ì¥ì• ë¬¼(ê°€ì¤‘ì¹˜ INF) ì¡´ì¬í•  ê²½ìš°
 						weight[y][x] = INF;
 					}
 				}
@@ -104,11 +104,11 @@ public class MonsterMove : MonoBehaviour {
 
     int Dfs(int x, int y, int distance, ref int minWeight) {
         if(distance < minWeight) {
-			if(x < weight[y].Length - 1) { //¼öÆò ÀÌµ¿
+			if(x < weight[y].Length - 1) { //ìˆ˜í‰ ì´ë™
                 vectorList.Add(new Vector2(1, 0));
 				distance = Dfs(x + 1, y, distance + weight[y][x], ref minWeight);
             }
-            if(y < weight.Length - 1) { //¼öÁ÷ ÀÌµ¿
+            if(y < weight.Length - 1) { //ìˆ˜ì§ ì´ë™
                 vectorList.Add(new Vector2(0, 1));
 				distance = Dfs(x, y + 1, distance + weight[y][x], ref minWeight);
             }
@@ -127,11 +127,11 @@ public class MonsterMove : MonoBehaviour {
 		int minWeight = INF;
         int distance = 0;
 
-		//ÃÊ±âÈ­
+		//ì´ˆê¸°í™”
 		GetMapInfo();
 
         distance = Dfs(0, 0, 0, ref minWeight);
-        Debug.Log("Shortest: " + distance); //ÃÖ´Ü °Å¸® È®ÀÎ¿ë ·Î±× Ãâ·Â
+        Debug.Log("Shortest: " + distance); //ìµœë‹¨ ê±°ë¦¬ í™•ì¸ìš© ë¡œê·¸ ì¶œë ¥
 
         return vector;
     }
@@ -139,14 +139,14 @@ public class MonsterMove : MonoBehaviour {
 	void Wandering() {
     }
 
-    void Move() {
+    public void Move() {
 		playerPos = GameObject.Find("TestPlayer").transform.position;
 		myPos = this.transform.position;
-        if(Vector2.Distance(myPos, playerPos) <= 5) { //ÇÃ·¹ÀÌ¾î - ¸ó½ºÅÍ °Å¸® 5 ÀÌÇÏ¸é
-            Chasing(); //ÇÃ·¹ÀÌ¾î Ãß°İ
+        if(Vector2.Distance(myPos, playerPos) <= 5) { //í”Œë ˆì´ì–´ - ëª¬ìŠ¤í„° ê±°ë¦¬ 5 ì´í•˜ë©´
+            Chasing(); //í”Œë ˆì´ì–´ ì¶”ê²©
         }
         else {
-            Wandering(); //·£´ı ÀÌµ¿
+            Wandering(); //ëœë¤ ì´ë™
         }
     }
 }

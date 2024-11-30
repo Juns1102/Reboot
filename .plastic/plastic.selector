@@ -1,4 +1,0 @@
-repository "Reboot@Succession_Kyeom@cloud"
-  path "/"
-    br "/main"
-    co "/main"
