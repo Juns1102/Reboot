@@ -15,6 +15,7 @@ public class UIControl : MonoBehaviour
     }
 
     private void OnEx(){
+        Debug.Log("move");
         ms.Move();
     }
 }
