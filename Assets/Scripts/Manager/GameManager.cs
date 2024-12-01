@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,10 +31,8 @@ public class GameManager : MonoBehaviour {
     }
     #endregion
     
-    [SerializeField]
-    private int tpNum;
-    private bool ableTP;
-    private bool inTp;
+    public bool ableTP;
+    public bool inTp;
     public float skill1MaxCoolTime;
     public float skill2MaxCoolTime;
     public float skill1CoolTime;
@@ -47,6 +46,8 @@ public class GameManager : MonoBehaviour {
     public List<Item> selectedItems = new List<Item>();
     public int limitWeight;  
     public int maxValue;
+    public delegate void Teleport();
+    public Teleport teleport;
 
     private void Start() {
         playerHearts = 3;
@@ -77,24 +78,42 @@ public class GameManager : MonoBehaviour {
     }
 
     public void SetTp(int tpNum){
-        this.tpNum = tpNum;
-        inTp = tpNum == 0 ? true : false;
+        inTp = tpNum != 0 ? true : false;
     }
 
-    public void Teleport(){
-        if(ableTP){
-            if(tpNum == 1){
-                SceneChanger.Instance.ChangeMap1();
-            }
-            else if(tpNum == 2){
-                SceneChanger.Instance.ChangeMap2();
-            }
-            else if(tpNum == 3){
-                SceneChanger.Instance.ChangeMap3();
-            }
-            else if(tpNum == 4){
-                SceneChanger.Instance.ChangeMap4();
-            }
+    public void SelectTp(int num){
+        if(num == 0){
+            teleport = Teleport0;
+        }
+        else if(num == 1){
+            teleport = Teleport1;
+        }
+        else if(num == 2){
+            teleport = Teleport2;
+        }
+        else if(num == 3){
+            teleport = Teleport3;
+        }
+    }
+
+    public void Teleport0(){
+        if(ableTP && inTp){
+            SceneChanger.Instance.ChangeMap1();
+        }
+    }
+    public void Teleport1(){
+        if(ableTP && inTp){
+            SceneChanger.Instance.ChangeMap2();
+        }
+    }
+    public void Teleport2(){
+        if(ableTP && inTp){
+            SceneChanger.Instance.ChangeMap3();
+        }
+    }
+    public void Teleport3(){
+        if(ableTP && inTp){
+            SceneChanger.Instance.ChangeMap4();
         }
     }
 

@@ -6,6 +6,8 @@ public class UIControl : MonoBehaviour
         UIManager.Instance.Inventory();
     }
     private void OnInteract(){
-        GameManager.Instance.Teleport();
+        if(GameManager.Instance.ableTP && GameManager.Instance.inTp){
+            UIManager.Instance.Map();
+        }
     }
 }

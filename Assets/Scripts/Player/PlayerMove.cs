@@ -27,7 +27,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void OnMove(InputValue value) {
-        if (InventoryManager.Instance.CheckCapacity() && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+        if (InventoryManager.Instance.CheckCapacity() && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !UIManager.Instance.activeMap) {
             if (Mathf.Abs(value.Get<Vector2>().x) == 1 || 
                 Mathf.Abs(value.Get<Vector2>().y) == 1) {
                 if(value.Get<Vector2>().x == 1){

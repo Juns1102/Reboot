@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
     #region Singleton
@@ -36,11 +37,14 @@ public class UIManager : MonoBehaviour {
     float fadeTime;
 
     private bool activeInventory;
+    public bool activeMap;
     private Slot[] slots;
     public int selectSlot;
     public GameObject inventoryUI;
     public GameObject informationUI;
     public GameObject inventorySlots;
+    public GameObject selectPlanetPanel;
+    public GameObject fade;
     public TextMeshProUGUI HUDcapacity;
     public TextMeshProUGUI value;
     public TextMeshProUGUI capacity;
@@ -61,10 +65,21 @@ public class UIManager : MonoBehaviour {
         informationUI.GetComponent<CanvasGroup>().alpha = 0;
         slots = inventorySlots.GetComponentsInChildren<Slot>();
         activeInventory = false;
+        activeMap = false;
+        selectPlanetPanel.SetActive(activeMap);
         inventoryUI.SetActive(activeInventory);
         informationUI.SetActive(activeInventory);
     }
-    
+
+    public void FadeIn(){
+        fade.GetComponent<CanvasGroup>().DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => fade.SetActive(false));
+    }
+
+    public void FadeOut(){
+        fade.SetActive(true);
+        fade.GetComponent<CanvasGroup>().DOFade(1, 1f).SetEase(Ease.Linear).OnComplete(() => {selectPlanetPanel.SetActive(false); activeMap = false; GameManager.Instance.teleport(); FadeIn();});
+    }
+
     public void EquipTp(){
         skill2Panel.color = new Color(255/255, 255/255, (float)206/255, 255/255);
     }
@@ -77,6 +92,20 @@ public class UIManager : MonoBehaviour {
         skill2Cool.fillAmount = GameManager.Instance.skill2CoolTime / GameManager.Instance.skill2MaxCoolTime;
     }
 
+    public void Map(){
+        if(activeMap){
+            selectPlanetPanel.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear).OnComplete(() => SetMap());
+        }
+        else{
+            SetMap();
+            selectPlanetPanel.GetComponent<CanvasGroup>().DOFade(1, fadeTime).SetEase(Ease.Linear);
+        }
+    }
+
+    public void SetMap(){
+        activeMap = !activeMap;
+        selectPlanetPanel.SetActive(activeMap);
+    }
     public void Inventory(){
         if(activeInventory){
             inventoryUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear).OnComplete(() => SetInventory());
