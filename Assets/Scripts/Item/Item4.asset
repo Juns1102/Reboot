@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704ee3153bd94b343a232cae96b9129d, type: 3}
   m_Name: Item4
   m_EditorClassIdentifier: 
+  sprite: {fileID: 469731637, guid: 76553bc4e2d59c54bb33b14c34387fdb, type: 3}
   name: D
   value: 700
   weight: 55

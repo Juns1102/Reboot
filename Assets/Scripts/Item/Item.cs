@@ -3,15 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class Item : MonoBehaviour
 {
+    public ItemData[] datas;
     public ItemData data;
 
-    private void SetUp(ItemData data) {
+    private void SetUp(ItemData[] datas) {
+        int n = Random.Range(0, datas.Length);
+        data = datas[n];
         gameObject.name = data.name;
         gameObject.GetComponent<SpriteRenderer>().sprite = data.sprite;
     }
 
     private void Awake() {
-        SetUp(data);
+        SetUp(datas);
+    }
+
+    private void Start(){
+        GameManager.Instance.fieldItems.Add(gameObject.GetComponent<Item>());
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

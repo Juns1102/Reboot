@@ -35,6 +35,9 @@ public class InventoryManager : MonoBehaviour {
     public int value;
     public int capacity;
     public int currentCapacity;
+    public int map1Cap;
+    public int map2Cap;
+    public int map3Cap;
     public List<ItemData> items = new List<ItemData>();
 
     private void Start() {

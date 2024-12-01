@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
     public int playerHearts;
     public List<Item> fieldItems = new List<Item>();
     public List<Item> selectedItems = new List<Item>();
-    public int limitWeight;  
+    public int limitWeight;
     public int maxValue;
     public delegate void Teleport();
     public Teleport teleport;
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
         inTp = tpNum != 0 ? true : false;
     }
 
-    public void SelectTp(int num){
+    public void SelectTp(int num=0){
         if(num == 0){
             teleport = Teleport0;
         }
