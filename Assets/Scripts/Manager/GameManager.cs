@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour {
     public int maxValue;
     public delegate void Teleport();
     public Teleport teleport;
+    public int moveCount;
+    public int maxMoveCount;
+    public int map1Value;
+    public int map2Value;
+    public int map3Value;
 
     private void Start() {
         playerHearts = 3;

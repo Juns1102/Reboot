@@ -31,7 +31,6 @@ public class InventoryManager : MonoBehaviour {
     }
     #endregion
 
-    [SerializeField]
     public int value;
     public int capacity;
     public int currentCapacity;

@@ -53,11 +53,15 @@ public class UIManager : MonoBehaviour {
     public TextMeshProUGUI itemWeight;
     public TextMeshProUGUI planetName;
     public TextMeshProUGUI maxValue;
+    public TextMeshProUGUI moveCount;
     public Image itemImage;
     public Image[] hearts;
     public Image skill1Cool;
     public Image skill2Cool;
     public Image skill2Panel;
+    public Button map1Btn;
+    public Button map2Btn;
+    public Button map3Btn;
 
     private void Start(){
         selectSlot = -1;
@@ -71,13 +75,37 @@ public class UIManager : MonoBehaviour {
         informationUI.SetActive(activeInventory);
     }
 
+    public void SetMapBtn(){
+        if(GameManager.Instance.map1Value!=0){
+            map1Btn.interactable = false;
+            map1Btn.GetComponentInChildren<TextMeshProUGUI>().text = "Value: " + GameManager.Instance.map1Value;
+        }
+        if(GameManager.Instance.map2Value!=0){
+            map2Btn.interactable = false;
+            map2Btn.GetComponentInChildren<TextMeshProUGUI>().text = "Value: " + GameManager.Instance.map2Value.ToString();
+        }
+        if(GameManager.Instance.map3Value!=0){
+            map3Btn.interactable = false;
+            map3Btn.GetComponentInChildren<TextMeshProUGUI>().text = "Value: " + GameManager.Instance.map3Value.ToString();
+        }
+    }
+
+    public void SetMoveCount(){
+        moveCount.text = GameManager.Instance.moveCount.ToString();
+    }
+
     public void FadeIn(){
-        fade.GetComponent<CanvasGroup>().DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {fade.SetActive(false); GameManager.Instance.SetMaxValueInfo();});
+        fade.GetComponent<CanvasGroup>().DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => 
+        {fade.SetActive(false); GameManager.Instance.SetMaxValueInfo();});
     }
 
     public void FadeOut(){
         fade.SetActive(true);
-        fade.GetComponent<CanvasGroup>().DOFade(1, 1f).SetEase(Ease.Linear).OnComplete(() => {if(activeInventory)Inventory(); GameManager.Instance.fieldItems.Clear(); selectPlanetPanel.SetActive(false); activeMap = false; GameManager.Instance.teleport(); FadeIn();});
+        fade.GetComponent<CanvasGroup>().DOFade(1, 1f).SetEase(Ease.Linear).OnComplete(() => 
+        {if(activeInventory)Inventory(); GameManager.Instance.moveCount = GameManager.Instance.maxMoveCount;
+        SetMoveCount(); GameManager.Instance.fieldItems.Clear(); 
+        selectPlanetPanel.SetActive(false); activeMap = false; 
+        GameManager.Instance.teleport(); FadeIn();});
     }
 
     public void EquipTp(){

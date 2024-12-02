@@ -1,6 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMove : MonoBehaviour
 {
@@ -39,6 +41,13 @@ public class PlayerMove : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1f, LayerMask.GetMask("Platform"));
                 if (moveStop && hit.collider == null) {
                     anim.SetBool("Walk", true);
+                    if(SceneManager.GetActiveScene().name != "Lobby"){
+                        GameManager.Instance.moveCount--;
+                        UIManager.Instance.SetMoveCount();
+                        // if(GameManager.Instance.moveCount <= 0){
+
+                        // }
+                    }
                     moveStop = false;
                     GameManager.Instance.SetTp(moveStop);
                     targetPos = value.Get<Vector2>();
