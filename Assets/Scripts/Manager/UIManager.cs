@@ -72,12 +72,12 @@ public class UIManager : MonoBehaviour {
     }
 
     public void FadeIn(){
-        fade.GetComponent<CanvasGroup>().DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => fade.SetActive(false));
+        fade.GetComponent<CanvasGroup>().DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {fade.SetActive(false); GameManager.Instance.SetMaxValueInfo();});
     }
 
     public void FadeOut(){
         fade.SetActive(true);
-        fade.GetComponent<CanvasGroup>().DOFade(1, 1f).SetEase(Ease.Linear).OnComplete(() => {selectPlanetPanel.SetActive(false); activeMap = false; GameManager.Instance.teleport(); FadeIn();});
+        fade.GetComponent<CanvasGroup>().DOFade(1, 1f).SetEase(Ease.Linear).OnComplete(() => {if(activeInventory)Inventory(); GameManager.Instance.fieldItems.Clear(); selectPlanetPanel.SetActive(false); activeMap = false; GameManager.Instance.teleport(); FadeIn();});
     }
 
     public void EquipTp(){

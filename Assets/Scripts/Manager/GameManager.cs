@@ -81,6 +81,10 @@ public class GameManager : MonoBehaviour {
         inTp = tpNum != 0 ? true : false;
     }
 
+    public void SetMaxValueInfo(){
+        SolveKnapsack(fieldItems, limitWeight);
+    }
+
     public void SelectTp(int num=0){
         if(num == 0){
             teleport = Teleport0;
@@ -99,21 +103,25 @@ public class GameManager : MonoBehaviour {
     public void Teleport0(){
         if(ableTP && inTp){
             SceneChanger.Instance.ChangeMap1();
+            planetName = "Lobby";
         }
     }
     public void Teleport1(){
         if(ableTP && inTp){
             SceneChanger.Instance.ChangeMap2();
+            planetName = "Ancient Ruins";
         }
     }
     public void Teleport2(){
         if(ableTP && inTp){
             SceneChanger.Instance.ChangeMap3();
+            planetName = "Atlantis";
         }
     }
     public void Teleport3(){
         if(ableTP && inTp){
             SceneChanger.Instance.ChangeMap4();
+            planetName = "GraveYard";
         }
     }
 
