@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pixelart_starfield_corona_0: -262078337370697572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

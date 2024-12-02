@@ -29,7 +29,8 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void OnMove(InputValue value) {
-        if (InventoryManager.Instance.CheckCapacity() && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !UIManager.Instance.activeMap) {
+        if (InventoryManager.Instance.CheckCapacity() && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") &&
+         !UIManager.Instance.activeMap && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu) {
             if (Mathf.Abs(value.Get<Vector2>().x) == 1 || 
                 Mathf.Abs(value.Get<Vector2>().y) == 1) {
                 if(value.Get<Vector2>().x == 1){
@@ -44,14 +45,15 @@ public class PlayerMove : MonoBehaviour
                     if(SceneManager.GetActiveScene().name != "Lobby"){
                         GameManager.Instance.moveCount--;
                         UIManager.Instance.SetMoveCount();
-                        // if(GameManager.Instance.moveCount <= 0){
-
-                        // }
+                        if(GameManager.Instance.moveCount <= 0){
+                            UIManager.Instance.Menu();
+                        }
                     }
                     moveStop = false;
                     GameManager.Instance.SetTp(moveStop);
                     targetPos = value.Get<Vector2>();
-                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {SetMove(); GameManager.Instance.SetTp(moveStop);});
+                    transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => 
+                    {SetMove(); GameManager.Instance.SetTp(moveStop); GameManager.Instance.CheckEnemies();});
                 }
             }
         }
@@ -59,7 +61,9 @@ public class PlayerMove : MonoBehaviour
 
     private void SetMove(){
         anim.SetBool("Walk", false);
-        moveStop = true;
+        if(!GameManager.Instance.enemyZone){
+            moveStop = true;
+        }
         GameManager.Instance.activeSkill = true;
         GameManager.Instance.SkillCoolDown();
         UIManager.Instance.SetCoolTime();

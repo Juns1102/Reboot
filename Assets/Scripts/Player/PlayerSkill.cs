@@ -10,6 +10,7 @@ public class PlayerSkill : MonoBehaviour
     Vector2 tpPos;
     GameObject tpStone;
     public GameObject tpStonePrefab;
+    public BoxCollider2D box;
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -18,7 +19,7 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void OnAttack(){
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill){
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu){
             if(GameManager.Instance.skill1CoolTime == 0){
                 GameManager.Instance.Skill1Set();
                 UIManager.Instance.SetCoolTime();
@@ -28,7 +29,7 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void OnTeleport(){
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill){
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu){
             if(GameManager.Instance.skill2CoolTime == 0){
                 if(!GameManager.Instance.equipTp){
                     tpStone = Instantiate(tpStonePrefab, gameObject.transform);
@@ -67,7 +68,16 @@ public class PlayerSkill : MonoBehaviour
             GameManager.Instance.activeSkill = true;
             GameManager.Instance.SkillCoolDown();
             UIManager.Instance.SetCoolTime();
+            GameManager.Instance.EnemiesMove();
             //GameManager.Instance.playerTurn = false;
         }
+    }
+
+    private void SetAttack(){
+        box.gameObject.SetActive(true);
+    }
+
+    private void EndAttack(){
+        box.gameObject.SetActive(false);
     }
 }

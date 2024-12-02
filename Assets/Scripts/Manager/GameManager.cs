@@ -40,10 +40,12 @@ public class GameManager : MonoBehaviour {
     public bool equipTp;
     public bool activeSkill;
     public bool playerTurn;
+    public bool enemyZone;
     public string planetName;
     public int playerHearts;
     public List<Item> fieldItems = new List<Item>();
     public List<Item> selectedItems = new List<Item>();
+    public List<GameObject> enemies = new List<GameObject>();
     public int limitWeight;
     public int maxValue;
     public delegate void Teleport();
@@ -59,6 +61,25 @@ public class GameManager : MonoBehaviour {
         SolveKnapsack(fieldItems, limitWeight);
     }
 
+    public void CheckEnemies(){
+        int n=0;
+        for(int i=0; i<enemies.Count; i++){
+            if(Vector2.Distance(enemies[i].transform.position, GameObject.Find("TestPlayer").transform.position) <= 5){
+                n++;
+            }
+        }
+        if(n > 0){
+            enemyZone = true;
+        }
+        else{
+            enemyZone = false;
+        }
+    }
+    public void EnemiesMove(){
+        for(int i=0; i < enemies.Count; i++){
+            enemies[i].GetComponent<MonsterMove>().Move();
+        }
+    }
     public void Skill1Set(){
         activeSkill = false;
         skill1CoolTime = skill1MaxCoolTime;
@@ -178,17 +199,4 @@ public class GameManager : MonoBehaviour {
     public void turnChange() {
         playerTurn = !playerTurn;
     }
-
-    // public void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Alpha4)) {
-    //         (int maxValue, List<Item> selectedItems) = SolveKnapsack(fieldItems, limitWeight);
-
-    //         Debug.Log("선택된 물건");
-    //         foreach (var item in selectedItems) {
-    //             Debug.Log($"물건: {item.name}, 가치: {item.data.value}, 무게: {item.data.weight}");
-    //         }
-    //         Debug.Log($"이 맵에서 얻을 수 있는 최대 가치: {maxValue}");
-    //     }
-    // }
 }

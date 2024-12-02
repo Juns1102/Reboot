@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pixelart_starfield_diagonal_diffraction_spikes_0: -6003664297215767608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
