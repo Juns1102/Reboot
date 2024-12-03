@@ -320,9 +320,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 223
-        width: 161
-        height: 129
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,19 +341,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_1
       rect:
         serializedVersion: 2
-        x: 180
-        y: 339
-        width: 9
-        height: 10
+        x: 32
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d0d93f203575910c0800000000000000
+      spriteID: 9d9bd93d6f1d1d84eb2fbd193bf3501e
       internalID: -4604553129966199539
       vertices: []
       indices: 
@@ -363,19 +363,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_2
       rect:
         serializedVersion: 2
-        x: 197
-        y: 322
-        width: 22
-        height: 28
+        x: 64
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c096bcca2ef501490800000000000000
+      spriteID: 362c8f07d12bd7440857f38b2655e316
       internalID: -7777611129302587124
       vertices: []
       indices: 
@@ -385,19 +385,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_3
       rect:
         serializedVersion: 2
-        x: 229
-        y: 322
-        width: 22
-        height: 28
+        x: 96
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f135e45c58f6eb120800000000000000
+      spriteID: 10b80ce15693df344b3be29bc6f5852c
       internalID: 2431503469158224671
       vertices: []
       indices: 
@@ -407,19 +407,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_4
       rect:
         serializedVersion: 2
-        x: 259
-        y: 321
-        width: 59
-        height: 27
+        x: 128
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 098152caa478e0e50800000000000000
+      spriteID: 72c69ebcdee10764cad4cc915733aa7f
       internalID: 6777503244024617104
       vertices: []
       indices: 
@@ -429,19 +429,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_5
       rect:
         serializedVersion: 2
-        x: 326
+        x: 160
         y: 320
-        width: 19
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b02f2e0c058b9ae10800000000000000
+      spriteID: 6d82a481a94570b40ae7369758b037fe
       internalID: 2209499749174931979
       vertices: []
       indices: 
@@ -451,19 +451,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_6
       rect:
         serializedVersion: 2
-        x: 351
-        y: 323
-        width: 34
-        height: 21
+        x: 192
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a1f78a6a7d943c60800000000000000
+      spriteID: a675d811f6461cf40af59b288fa8968a
       internalID: 7797030003984036265
       vertices: []
       indices: 
@@ -473,19 +473,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_7
       rect:
         serializedVersion: 2
-        x: 416
-        y: 321
-        width: 64
-        height: 31
+        x: 224
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 757f31dde4c522f70800000000000000
+      spriteID: 933d1f396e2762c40909ef4b12c4be60
       internalID: 9160986085811287895
       vertices: []
       indices: 
@@ -495,19 +495,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_8
       rect:
         serializedVersion: 2
-        x: 488
-        y: 323
-        width: 80
-        height: 27
+        x: 256
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dee19ebf5b24911d0800000000000000
+      spriteID: ea74ad25695a44f4f9b6a855c591d47b
       internalID: -3379596695981973779
       vertices: []
       indices: 
@@ -517,19 +517,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_9
       rect:
         serializedVersion: 2
-        x: 583
-        y: 322
-        width: 80
-        height: 27
+        x: 288
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c1f82e4867b68bc50800000000000000
+      spriteID: 16e2d73c3bae14644953129c97620ec2
       internalID: 6681208203983884060
       vertices: []
       indices: 
@@ -539,19 +539,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_10
       rect:
         serializedVersion: 2
-        x: 180
-        y: 323
-        width: 9
-        height: 10
+        x: 320
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 946336112ce80bcd0800000000000000
+      spriteID: 3eb5436f376d1b9439f78f45ac008d02
       internalID: -2544376825297815991
       vertices: []
       indices: 
@@ -561,19 +561,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_11
       rect:
         serializedVersion: 2
-        x: 198
-        y: 295
-        width: 20
-        height: 17
+        x: 352
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6f920047c3fc468d0800000000000000
+      spriteID: 1076b72c20f08a24fab5ffaed520eea5
       internalID: -2853928405294896650
       vertices: []
       indices: 
@@ -583,19 +583,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_12
       rect:
         serializedVersion: 2
-        x: 230
-        y: 295
-        width: 20
-        height: 17
+        x: 416
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a60de20c5ac4d9f60800000000000000
+      spriteID: 6cad5548efbca9044b29d87b65ba6c0e
       internalID: 8042668784331182186
       vertices: []
       indices: 
@@ -605,19 +605,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_13
       rect:
         serializedVersion: 2
-        x: 257
-        y: 295
-        width: 31
-        height: 17
+        x: 448
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7f381db4917d0da70800000000000000
+      spriteID: b930ea9fc6482b04a9030aacddd7e939
       internalID: 8849809771429200887
       vertices: []
       indices: 
@@ -627,19 +627,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_14
       rect:
         serializedVersion: 2
-        x: 289
-        y: 295
-        width: 31
-        height: 17
+        x: 480
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 61ef2abb9b96f9ac0800000000000000
+      spriteID: 9b35077af7ae45b47887b2271896f46b
       internalID: -3846239310313226730
       vertices: []
       indices: 
@@ -649,19 +649,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_15
       rect:
         serializedVersion: 2
-        x: 352
-        y: 291
+        x: 512
+        y: 320
         width: 32
-        height: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f30b7ebbe56c25120800000000000000
+      spriteID: fc44df001c1bbea42a30fcc44acc3921
       internalID: 2401199661523644479
       vertices: []
       indices: 
@@ -671,19 +671,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_16
       rect:
         serializedVersion: 2
-        x: 416
-        y: 298
-        width: 30
-        height: 15
+        x: 544
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1d35634d7aac2ade0800000000000000
+      spriteID: b70001f8c873e2346ad31467111de40f
       internalID: -1323272518324825135
       vertices: []
       indices: 
@@ -693,19 +693,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_17
       rect:
         serializedVersion: 2
-        x: 448
-        y: 298
-        width: 30
-        height: 15
+        x: 576
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 34d3823f0642548d0800000000000000
+      spriteID: 0c9b857496df3e64cbba63fc1f298a7b
       internalID: -2862841989309121213
       vertices: []
       indices: 
@@ -715,19 +715,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_18
       rect:
         serializedVersion: 2
-        x: 488
-        y: 291
-        width: 80
-        height: 27
+        x: 608
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 125a638dfcc6b8a90800000000000000
+      spriteID: 04e6a442856817e49bdd697dfb21b1b4
       internalID: -7310629930164378335
       vertices: []
       indices: 
@@ -737,19 +737,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_19
       rect:
         serializedVersion: 2
-        x: 583
-        y: 291
-        width: 80
-        height: 27
+        x: 640
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6e096413526b4b790800000000000000
+      spriteID: a6276cad984909f419b04888f9f84827
       internalID: -7515181607317761818
       vertices: []
       indices: 
@@ -759,19 +759,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_20
       rect:
         serializedVersion: 2
-        x: 207
-        y: 258
-        width: 16
-        height: 30
+        x: 0
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 83a38aceef52a7420800000000000000
+      spriteID: 0be53199a90d3034286ec2d6f7a1e9be
       internalID: 2628455109346474552
       vertices: []
       indices: 
@@ -781,19 +781,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_21
       rect:
         serializedVersion: 2
-        x: 223
-        y: 266
-        width: 34
-        height: 22
+        x: 32
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 66bad595d945b92d0800000000000000
+      spriteID: de1d3d390f7723947a6184c8b06c664f
       internalID: -3270927669568623770
       vertices: []
       indices: 
@@ -803,19 +803,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_22
       rect:
         serializedVersion: 2
-        x: 232
-        y: 258
-        width: 16
-        height: 9
+        x: 64
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d371f4d3d0fc392b0800000000000000
+      spriteID: 29639c89a609ae546a105a5dfdba5a3c
       internalID: -5578887857611794627
       vertices: []
       indices: 
@@ -825,19 +825,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_23
       rect:
         serializedVersion: 2
-        x: 250
-        y: 259
-        width: 6
-        height: 7
+        x: 96
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6d11f6f18246a1720800000000000000
+      spriteID: 962e10437380e66488ad91ef6416c35b
       internalID: 2817674640362508758
       vertices: []
       indices: 
@@ -847,19 +847,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_24
       rect:
         serializedVersion: 2
-        x: 257
-        y: 258
-        width: 16
-        height: 30
+        x: 128
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 11a31e03880183a60800000000000000
+      spriteID: 7759ac4953ec2b54dbb44864fc88691e
       internalID: 7653885743837821457
       vertices: []
       indices: 
@@ -869,9 +869,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_25
       rect:
         serializedVersion: 2
-        x: 322
-        y: 257
-        width: 27
+        x: 192
+        y: 288
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -879,9 +879,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d011d305852308520800000000000000
+      spriteID: 1c8528413dde1c9489185316d26b68d7
       internalID: 2702215131306987789
       vertices: []
       indices: 
@@ -891,9 +891,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_26
       rect:
         serializedVersion: 2
-        x: 354
-        y: 257
-        width: 28
+        x: 224
+        y: 288
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -901,9 +901,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 12af63d9e39d01090800000000000000
+      spriteID: e0d3fd0820432214ca7144bdc86bd8e7
       internalID: -8065708069671732703
       vertices: []
       indices: 
@@ -913,19 +913,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_27
       rect:
         serializedVersion: 2
-        x: 383
-        y: 220
-        width: 98
-        height: 69
+        x: 256
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2a86653ecb92c8730800000000000000
+      spriteID: 002b3f2c85ad2784f8f442c37e69edb8
       internalID: 4002620060070209698
       vertices: []
       indices: 
@@ -935,19 +935,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_28
       rect:
         serializedVersion: 2
-        x: 488
-        y: 258
-        width: 80
-        height: 27
+        x: 288
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e84857bb099118230800000000000000
+      spriteID: a5360b6144ff9cd42b4d959b16de0bb0
       internalID: 3639218083303097486
       vertices: []
       indices: 
@@ -957,19 +957,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_29
       rect:
         serializedVersion: 2
-        x: 584
-        y: 259
-        width: 80
-        height: 27
+        x: 352
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b9afa4b6401bf1f10800000000000000
+      spriteID: 7334782811dbce34ab29968d2e57f3b6
       internalID: 2242705771991857819
       vertices: []
       indices: 
@@ -979,19 +979,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_30
       rect:
         serializedVersion: 2
-        x: 207
-        y: 225
-        width: 16
-        height: 30
+        x: 416
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22dfb2bedf7e45800800000000000000
+      spriteID: d9fd11a0007c2fc42948686a1f9fb431
       internalID: 600359728105389346
       vertices: []
       indices: 
@@ -1001,19 +1001,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_31
       rect:
         serializedVersion: 2
-        x: 223
-        y: 233
-        width: 34
-        height: 22
+        x: 448
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e285bd0ff99c08870800000000000000
+      spriteID: bd26bee5439cc1c4eb49e6247f22656e
       internalID: 8683161770348206126
       vertices: []
       indices: 
@@ -1023,19 +1023,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_32
       rect:
         serializedVersion: 2
-        x: 232
-        y: 225
-        width: 16
-        height: 9
+        x: 480
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 830c4d6b2d979b4e0800000000000000
+      spriteID: 59846fb699b0e1248a32a9d69e58ef54
       internalID: -1965405816453021640
       vertices: []
       indices: 
@@ -1045,19 +1045,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_33
       rect:
         serializedVersion: 2
-        x: 250
-        y: 226
-        width: 6
-        height: 7
+        x: 512
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 321d604a332802370800000000000000
+      spriteID: e52a99f852d6166438e63bfb0d5708bc
       internalID: 8295773671923306787
       vertices: []
       indices: 
@@ -1067,19 +1067,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_34
       rect:
         serializedVersion: 2
-        x: 257
-        y: 225
-        width: 16
-        height: 30
+        x: 544
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6b09d83533e14c430800000000000000
+      spriteID: ee52e9f3638d73440b0c755c324240e0
       internalID: 3802197191201493174
       vertices: []
       indices: 
@@ -1089,9 +1089,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_35
       rect:
         serializedVersion: 2
-        x: 321
-        y: 225
-        width: 24
+        x: 576
+        y: 288
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1099,9 +1099,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3941df544b0e21b00800000000000000
+      spriteID: 918614ae62c9684499c4457fbf1bc801
       internalID: 797947148870947987
       vertices: []
       indices: 
@@ -1111,9 +1111,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_36
       rect:
         serializedVersion: 2
-        x: 352
-        y: 225
-        width: 25
+        x: 608
+        y: 288
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1121,9 +1121,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d13662c5e835e0300800000000000000
+      spriteID: 864c82d8f1e1a6a48a281d8e60395c15
       internalID: 220205302684214045
       vertices: []
       indices: 
@@ -1133,19 +1133,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_37
       rect:
         serializedVersion: 2
-        x: 514
-        y: 229
-        width: 60
-        height: 27
+        x: 640
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85d0e61fa46a29380800000000000000
+      spriteID: 62e725d823dbded4cb8db9fe87369a16
       internalID: -8965921067332924072
       vertices: []
       indices: 
@@ -1155,9 +1155,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_38
       rect:
         serializedVersion: 2
-        x: 610
-        y: 224
-        width: 28
+        x: 0
+        y: 256
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1165,9 +1165,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de4bdfadcb0a4cce0800000000000000
+      spriteID: 1cb0b64e8e11ccb47bcd0dcb29b1ed9a
       internalID: -1385806052334914323
       vertices: []
       indices: 
@@ -1177,19 +1177,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_39
       rect:
         serializedVersion: 2
-        x: 22
-        y: 81
-        width: 116
-        height: 122
+        x: 32
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85c480c5116414490800000000000000
+      spriteID: 9c03ea0521fc6c4488ae346e8f6ec9c4
       internalID: -7763847242237588392
       vertices: []
       indices: 
@@ -1199,9 +1199,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_40
       rect:
         serializedVersion: 2
-        x: 323
-        y: 193
-        width: 24
+        x: 64
+        y: 256
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1209,9 +1209,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f655ea89be57e6e60800000000000000
+      spriteID: 5a2b2089767da784c8292aa7ea143e78
       internalID: 7957427246349571439
       vertices: []
       indices: 
@@ -1221,9 +1221,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_41
       rect:
         serializedVersion: 2
-        x: 354
-        y: 193
-        width: 25
+        x: 96
+        y: 256
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1231,9 +1231,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cf3dd2720aae11810800000000000000
+      spriteID: 69abf5de3e5a1ad49af42e2c80578cd9
       internalID: 1734425305087333372
       vertices: []
       indices: 
@@ -1243,9 +1243,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_42
       rect:
         serializedVersion: 2
-        x: 514
-        y: 192
-        width: 60
+        x: 128
+        y: 256
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1253,9 +1253,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 53bbf8b072c24b430800000000000000
+      spriteID: 976d2a8913145b04789eb7523d48b092
       internalID: 3797708931989486389
       vertices: []
       indices: 
@@ -1265,19 +1265,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_43
       rect:
         serializedVersion: 2
-        x: 193
-        y: 135
-        width: 30
-        height: 48
+        x: 192
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 39572b24f87dd10d0800000000000000
+      spriteID: d5c0b581b022571478ec7a8a35a180fd
       internalID: -3450364729196644973
       vertices: []
       indices: 
@@ -1287,19 +1287,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_44
       rect:
         serializedVersion: 2
-        x: 225
-        y: 135
-        width: 30
-        height: 48
+        x: 224
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd5200d078a427040800000000000000
+      spriteID: b63135b0a8b729b4f9ac189cf0325b89
       internalID: 4643856109671556575
       vertices: []
       indices: 
@@ -1309,19 +1309,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_45
       rect:
         serializedVersion: 2
-        x: 257
-        y: 133
-        width: 30
-        height: 50
+        x: 256
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 108357f4101254090800000000000000
+      spriteID: fd030c6d196dbf14aa3fc9a4c5364ae1
       internalID: -8050992469343127551
       vertices: []
       indices: 
@@ -1331,19 +1331,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_46
       rect:
         serializedVersion: 2
-        x: 322
-        y: 160
-        width: 27
-        height: 27
+        x: 320
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ae5739e7a21930900800000000000000
+      spriteID: 170313f395dfd4640823dceeac40c5cc
       internalID: 649522382969730538
       vertices: []
       indices: 
@@ -1353,19 +1353,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_47
       rect:
         serializedVersion: 2
-        x: 354
-        y: 160
-        width: 28
-        height: 27
+        x: 352
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f01929cb8e68c1c0800000000000000
+      spriteID: 5ee10e98176655c498e8faa706d842d3
       internalID: -4483211882392907532
       vertices: []
       indices: 
@@ -1375,19 +1375,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_48
       rect:
         serializedVersion: 2
-        x: 386
-        y: 160
-        width: 61
-        height: 31
+        x: 384
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8848cc555b88c5b40800000000000000
+      spriteID: 074d2ecc035ef8b409ebdfa480b3169d
       internalID: 5430365563111900296
       vertices: []
       indices: 
@@ -1397,19 +1397,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_49
       rect:
         serializedVersion: 2
-        x: 514
-        y: 159
-        width: 60
-        height: 33
+        x: 416
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c576a75c413b4ff90800000000000000
+      spriteID: bb920d13a3f3f1a48a208d0df24ec2d1
       internalID: -6920709825567758500
       vertices: []
       indices: 
@@ -1419,19 +1419,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_50
       rect:
         serializedVersion: 2
-        x: 585
-        y: 160
-        width: 12
-        height: 30
+        x: 448
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 90d54396f0d312500800000000000000
+      spriteID: 9cc83bacfb3764d4dada4c0621e7520a
       internalID: 369643780819934473
       vertices: []
       indices: 
@@ -1441,19 +1441,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_51
       rect:
         serializedVersion: 2
-        x: 610
-        y: 178
-        width: 26
-        height: 7
+        x: 480
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5dfc2d8f33f2d0350800000000000000
+      spriteID: 1cb694ea955d0674494a80bc3bc8f5bc
       internalID: 5984491380109660117
       vertices: []
       indices: 
@@ -1463,19 +1463,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_52
       rect:
         serializedVersion: 2
-        x: 610
-        y: 171
-        width: 26
-        height: 8
+        x: 512
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c33093bbcd2632e20800000000000000
+      spriteID: f570a646e380c8f45bb52eae24ad0d70
       internalID: 3324609650102960956
       vertices: []
       indices: 
@@ -1485,19 +1485,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_53
       rect:
         serializedVersion: 2
-        x: 610
-        y: 165
-        width: 26
-        height: 7
+        x: 544
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9fad2e3fdea5cf1c0800000000000000
+      spriteID: b5558057c4ef7a24a8cfb2d21661bb31
       internalID: -4468596752212894983
       vertices: []
       indices: 
@@ -1507,19 +1507,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_54
       rect:
         serializedVersion: 2
-        x: 386
-        y: 150
-        width: 60
-        height: 8
+        x: 576
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a6ccc991741df9050800000000000000
+      spriteID: 4af5297da18554046a6015cd2f8f64b4
       internalID: 5809592147633818730
       vertices: []
       indices: 
@@ -1529,9 +1529,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_55
       rect:
         serializedVersion: 2
-        x: 514
-        y: 127
-        width: 60
+        x: 608
+        y: 256
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1539,9 +1539,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2561e4ae08afbe7e0800000000000000
+      spriteID: d6abcc2434ad77c48b63a76f9ab02374
       internalID: -1735017799827450286
       vertices: []
       indices: 
@@ -1551,19 +1551,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_56
       rect:
         serializedVersion: 2
-        x: 581
-        y: 136
-        width: 23
-        height: 16
+        x: 640
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e54266734835c8b0800000000000000
+      spriteID: 15e8fed5dacb64f4ba2d45e9d63797b0
       internalID: -5132634337918695959
       vertices: []
       indices: 
@@ -1573,19 +1573,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_57
       rect:
         serializedVersion: 2
-        x: 194
-        y: 63
-        width: 44
-        height: 48
+        x: 0
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 968ba51160dfe92c0800000000000000
+      spriteID: a368fc5924a99a140b792c90702d1359
       internalID: -4422819581528459159
       vertices: []
       indices: 
@@ -1595,19 +1595,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_58
       rect:
         serializedVersion: 2
-        x: 242
-        y: 63
-        width: 44
-        height: 48
+        x: 32
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7ce4203429a0fc5d0800000000000000
+      spriteID: 7534aa0a44a67dc419f854b231ff171f
       internalID: -3040199600146067769
       vertices: []
       indices: 
@@ -1617,19 +1617,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_59
       rect:
         serializedVersion: 2
-        x: 321
-        y: 95
-        width: 30
-        height: 30
+        x: 64
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 864756b160366a720800000000000000
+      spriteID: e50f8aaa295bc0e45bb9f41c4b582efe
       internalID: 2857079891493745768
       vertices: []
       indices: 
@@ -1639,9 +1639,9 @@ TextureImporter:
       name: pixel-cyberpunk-interior_60
       rect:
         serializedVersion: 2
-        x: 353
-        y: 95
-        width: 30
+        x: 96
+        y: 224
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1649,9 +1649,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4d85c14052da9c930800000000000000
+      spriteID: 465f2e71419c3aa4fb1ddf46ad7751bf
       internalID: 4164049704975096020
       vertices: []
       indices: 
@@ -1661,19 +1661,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_61
       rect:
         serializedVersion: 2
-        x: 391
-        y: 78
-        width: 48
-        height: 38
+        x: 128
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9fac2ee177d072f90800000000000000
+      spriteID: cb4a41c4173cd4543aa3ed3b1bc5f92e
       internalID: -6978594292316845319
       vertices: []
       indices: 
@@ -1683,19 +1683,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_62
       rect:
         serializedVersion: 2
-        x: 455
-        y: 78
-        width: 48
-        height: 38
+        x: 192
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2e1f0c3fd8bfc0f90800000000000000
+      spriteID: ffc3ef740d4bbee4b8e44b8b2ad5ce70
       internalID: -6985932334860013086
       vertices: []
       indices: 
@@ -1705,19 +1705,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_63
       rect:
         serializedVersion: 2
-        x: 518
-        y: 105
-        width: 18
-        height: 10
+        x: 224
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ac7ad98ba4f1af00800000000000000
+      spriteID: 436442bf0e4b69842b52426282d913f9
       internalID: 1126450399408716960
       vertices: []
       indices: 
@@ -1727,19 +1727,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_64
       rect:
         serializedVersion: 2
-        x: 551
-        y: 105
-        width: 18
-        height: 10
+        x: 256
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dd18defbdb0095d00800000000000000
+      spriteID: a161a1c8bbe8cc84ea0fde0bc1b14aee
       internalID: 961800810389144029
       vertices: []
       indices: 
@@ -1749,19 +1749,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_65
       rect:
         serializedVersion: 2
-        x: 582
-        y: 105
-        width: 18
-        height: 10
+        x: 320
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7892f1473724d3f80800000000000000
+      spriteID: 3943da1cb33380746a1917254afca11b
       internalID: -8125265089069635193
       vertices: []
       indices: 
@@ -1771,19 +1771,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_66
       rect:
         serializedVersion: 2
-        x: 617
-        y: 105
-        width: 13
-        height: 12
+        x: 352
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb94f5be823907650800000000000000
+      spriteID: a9253a040bb39464bad3e50e40bba86d
       internalID: 6228640088610261439
       vertices: []
       indices: 
@@ -1793,19 +1793,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_67
       rect:
         serializedVersion: 2
-        x: 619
-        y: 76
-        width: 10
-        height: 11
+        x: 416
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6665b26e181ae92a0800000000000000
+      spriteID: 7674fb6885295f4448d61f4790f8a1b5
       internalID: -6728763213960489370
       vertices: []
       indices: 
@@ -1815,19 +1815,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_68
       rect:
         serializedVersion: 2
-        x: 203
-        y: 9
-        width: 43
-        height: 50
+        x: 448
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d3dc36216a8d14f0800000000000000
+      spriteID: 90ce26eb4ddd2734c83565a5215c14c8
       internalID: -856376204272544809
       vertices: []
       indices: 
@@ -1837,19 +1837,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_69
       rect:
         serializedVersion: 2
-        x: 263
-        y: 16
-        width: 48
-        height: 37
+        x: 512
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96ab875435e404d00800000000000000
+      spriteID: 2af40161401354348bb60bb43669b0c0
       internalID: 954849240557337193
       vertices: []
       indices: 
@@ -1859,19 +1859,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_70
       rect:
         serializedVersion: 2
-        x: 329
-        y: 16
-        width: 48
-        height: 37
+        x: 544
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a70a73e02ba285ed0800000000000000
+      spriteID: ffe06789cb2a8704ca117d73928db786
       internalID: -2425141455107940230
       vertices: []
       indices: 
@@ -1881,19 +1881,19 @@ TextureImporter:
       name: pixel-cyberpunk-interior_71
       rect:
         serializedVersion: 2
-        x: 392
-        y: 43
-        width: 48
-        height: 10
+        x: 608
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f7392b8a304f4ea50800000000000000
+      spriteID: 1671a958d58007949946d45f013a3f1f
       internalID: 6549628054655898495
       vertices: []
       indices: 
@@ -1903,20 +1903,1714 @@ TextureImporter:
       name: pixel-cyberpunk-interior_72
       rect:
         serializedVersion: 2
-        x: 392
-        y: 11
-        width: 48
-        height: 10
+        x: 32
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a9773ad5a44303160800000000000000
+      spriteID: 78a8cbfb456db69459dbcc7deb2fab43
       internalID: 7003154914564339610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_73
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5cc216ee15ac24dbe1eb2f9c34c26a
+      internalID: -187674629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29da35291781a8e4690c92ff0d304d30
+      internalID: -1969818907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_75
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57cdbd7d23c3a9468911fcb953c59af
+      internalID: 195440837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_76
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a447005ed3b34b4597242864b05e4cc
+      internalID: -1613869404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_77
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17684458ebce57e4798037fa31174e52
+      internalID: -1029291549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_78
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b04642750d47541973a87f305766b0
+      internalID: 1985074340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_79
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28bb43e2c5ff574ea7cda65ed038eed
+      internalID: 183254952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_80
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ae4f9161ea994479ba3254d8ef364d
+      internalID: 1931060621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407b2f14df929124f9aaf0218c8db2f3
+      internalID: 1549613802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_82
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1897be104dcdc40802bf53c3a486a3
+      internalID: -134769539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_83
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44d92c7abd93284298b4784ea1eb21b
+      internalID: -491285844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64f9db9d54eefe4c98d1d30cce052f1
+      internalID: 1362861876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_85
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e632d0a9f66607243b48fe491e5b3b4c
+      internalID: -320944001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_86
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e563a7155e0990a4983940500e3ab9ad
+      internalID: 321827478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_87
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b9bdadb475ce429a0f6b445a087a5
+      internalID: 2074157719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_88
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de1a5fc67f88304e860cc6b186233a4
+      internalID: -3652657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_89
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524663dfab1d4fd4fae62ed0ffcea396
+      internalID: 1375275919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_90
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5f89da743bce4458810544018ad3f2
+      internalID: 1448003076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_91
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5e109e75e5f80409f6d89f8ad88d4e
+      internalID: -577899571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_92
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895cbad5e6e3ab344aed486536234112
+      internalID: 712826449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_93
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f9f12857f25cb4ba74bbb78f02396d
+      internalID: 1880065211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_94
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4183b8252151140bfa126495994023
+      internalID: -996033819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_95
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2b04ac0ac04624480ddac20edeb2ac
+      internalID: 2115620202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1487148b781fc140aad55e2ff74553f
+      internalID: -837704230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8946e0cc6a95b4fa37d2331dd87140
+      internalID: 1226896974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_98
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e09a7010babcd40bc58e03407df30f
+      internalID: -1513271840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_99
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f0f2f56a0605f4d96485c6e82e68bf
+      internalID: 2128698229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_100
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36ba364f277b924cafe31fd7761f7f1
+      internalID: 2020684774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_101
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b8054718e3ecc448674aab9f414d62
+      internalID: -1747960432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_102
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5924d8346f72544bc6a2e1b0ed456e
+      internalID: 514273001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_103
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2128279539b5e174f8b8ce97e349518f
+      internalID: 639387420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_104
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca81fd4bd5e475c49a8991e1cec79fce
+      internalID: -1807993448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_105
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d6914ca5f5b6d4395035a14f08e4a4
+      internalID: -1631184130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977d5fc91b8abff4aa0a0ec476e476d5
+      internalID: 680243377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_107
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84998259cd30e3b459a70bf7cc941c48
+      internalID: -639325455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_108
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ea13a207dd83c40b1b5cbcd97054ab
+      internalID: 1215110400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_109
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82101e48336b979438a2f51d1a2a39aa
+      internalID: -1867927955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_110
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cc0539742402647ac1e68afeb5dc73
+      internalID: -915820408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_111
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2b30acbf965f94684161d51d4b6058
+      internalID: 734631927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_112
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a122d38936439a47b2b2c981d0d90e3
+      internalID: -968990114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_113
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c54bf78c2e8d4342801f86676a4e046
+      internalID: 937146706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_114
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c027b588608eca34a8affdefba65a3e5
+      internalID: 2118551251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_115
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7510a8661759c144b90f67500964e376
+      internalID: 769788837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_116
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafd11a9a4e329840ba52f353717799e
+      internalID: 492836459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_117
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf08fc65dfcf704e8e0ff77dd554b3f
+      internalID: -1389419167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_118
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155d7b1e83c70e54699ac4a62c252fee
+      internalID: 994609737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_119
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a485b7f5483d82418ae73c4b9f88f8e
+      internalID: -742787616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_120
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46709372127a12c4a82edf3716f5c744
+      internalID: 1648072094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_121
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08d3b489693bad418e75d5119e720f6
+      internalID: 686610619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_122
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4043a9a28994d864383b1847969b85a8
+      internalID: -1532747046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_123
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bc1f3e7bddf7440b105c5f7c51e5f4
+      internalID: 372013648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_124
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bd112d9804bb042a0366f2223a6d59
+      internalID: -22180935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_125
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0aec42e25fae14888a1e6f13027c84
+      internalID: 404831018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_126
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a8225d3b1a64547a227ae26a18f98a
+      internalID: 1881072308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_127
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11322799725fa44eb89a5553d492eff
+      internalID: 1757617712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_128
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030bce471a85f6942af68e09f6af4533
+      internalID: -1033289892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_129
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97e88adee99197429b59a1ec2bb6894
+      internalID: -804199069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_130
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c856c25bf53f87c42804db57e5423381
+      internalID: -405951233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_131
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106a2d571ecae5b46903a1c602d303d4
+      internalID: -161239614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_132
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a233d496571fdae4f9bfee0f866db7ff
+      internalID: 1950434700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_133
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08544e1eb61f31b449242458047a7e26
+      internalID: -1560384897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_134
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053987297ecd1f544a7d3f1ea4ca2d6b
+      internalID: 1984425001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_135
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6a87eb25d370c4781e0db4a103e268
+      internalID: -531653892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_136
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a68b6a0fec3b414faf5c53befd01b57
+      internalID: -1549090245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_137
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d6361fed746c74580c880f3a99572c
+      internalID: -723550690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_138
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5662ce6351b4d4ea8e24f1b17bb10e
+      internalID: 507946823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_139
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce6c75bc84d93443b5dea6b7dadeebb
+      internalID: -332361923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_140
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a7b0a1ad86bd147b024a0d4812865b
+      internalID: -1444973684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_141
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cea8016005fba34a83ac47215ead252
+      internalID: 1854482379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_142
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cce3ce5cbc91543a9e45cf7ebf234a
+      internalID: 1387541694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_143
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfb56212edacdc449a06e2d493a0134
+      internalID: -720731836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_144
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8389b76223916d948938c06f7bdb94f7
+      internalID: 1081796229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_145
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a9472ce0dca1b43b235ececcaf2dee
+      internalID: 1975525372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_146
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e236684d37908e64ba400c8007237560
+      internalID: -791020750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_147
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1119b63cc9fe340af519e6b373b6a0
+      internalID: 1122140211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_148
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c23339e0c4515c438eb99365a90ce86
+      internalID: -43533896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior_149
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fd4b4073710434391f2164a8812f33
+      internalID: -561067800
       vertices: []
       indices: 
       edges: []
@@ -1925,7 +3619,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6e5fc2afb5b824641a64f5f27d060948
     internalID: 0
     vertices: []
     indices: 
@@ -1938,10 +3632,60 @@ TextureImporter:
       pixel-cyberpunk-interior_0: -2927911676630494111
       pixel-cyberpunk-interior_1: -4604553129966199539
       pixel-cyberpunk-interior_10: -2544376825297815991
+      pixel-cyberpunk-interior_100: 2020684774
+      pixel-cyberpunk-interior_101: -1747960432
+      pixel-cyberpunk-interior_102: 514273001
+      pixel-cyberpunk-interior_103: 639387420
+      pixel-cyberpunk-interior_104: -1807993448
+      pixel-cyberpunk-interior_105: -1631184130
+      pixel-cyberpunk-interior_106: 680243377
+      pixel-cyberpunk-interior_107: -639325455
+      pixel-cyberpunk-interior_108: 1215110400
+      pixel-cyberpunk-interior_109: -1867927955
       pixel-cyberpunk-interior_11: -2853928405294896650
+      pixel-cyberpunk-interior_110: -915820408
+      pixel-cyberpunk-interior_111: 734631927
+      pixel-cyberpunk-interior_112: -968990114
+      pixel-cyberpunk-interior_113: 937146706
+      pixel-cyberpunk-interior_114: 2118551251
+      pixel-cyberpunk-interior_115: 769788837
+      pixel-cyberpunk-interior_116: 492836459
+      pixel-cyberpunk-interior_117: -1389419167
+      pixel-cyberpunk-interior_118: 994609737
+      pixel-cyberpunk-interior_119: -742787616
       pixel-cyberpunk-interior_12: 8042668784331182186
+      pixel-cyberpunk-interior_120: 1648072094
+      pixel-cyberpunk-interior_121: 686610619
+      pixel-cyberpunk-interior_122: -1532747046
+      pixel-cyberpunk-interior_123: 372013648
+      pixel-cyberpunk-interior_124: -22180935
+      pixel-cyberpunk-interior_125: 404831018
+      pixel-cyberpunk-interior_126: 1881072308
+      pixel-cyberpunk-interior_127: 1757617712
+      pixel-cyberpunk-interior_128: -1033289892
+      pixel-cyberpunk-interior_129: -804199069
       pixel-cyberpunk-interior_13: 8849809771429200887
+      pixel-cyberpunk-interior_130: -405951233
+      pixel-cyberpunk-interior_131: -161239614
+      pixel-cyberpunk-interior_132: 1950434700
+      pixel-cyberpunk-interior_133: -1560384897
+      pixel-cyberpunk-interior_134: 1984425001
+      pixel-cyberpunk-interior_135: -531653892
+      pixel-cyberpunk-interior_136: -1549090245
+      pixel-cyberpunk-interior_137: -723550690
+      pixel-cyberpunk-interior_138: 507946823
+      pixel-cyberpunk-interior_139: -332361923
       pixel-cyberpunk-interior_14: -3846239310313226730
+      pixel-cyberpunk-interior_140: -1444973684
+      pixel-cyberpunk-interior_141: 1854482379
+      pixel-cyberpunk-interior_142: 1387541694
+      pixel-cyberpunk-interior_143: -720731836
+      pixel-cyberpunk-interior_144: 1081796229
+      pixel-cyberpunk-interior_145: 1975525372
+      pixel-cyberpunk-interior_146: -791020750
+      pixel-cyberpunk-interior_147: 1122140211
+      pixel-cyberpunk-interior_148: -43533896
+      pixel-cyberpunk-interior_149: -561067800
       pixel-cyberpunk-interior_15: 2401199661523644479
       pixel-cyberpunk-interior_16: -1323272518324825135
       pixel-cyberpunk-interior_17: -2862841989309121213
@@ -2006,8 +3750,35 @@ TextureImporter:
       pixel-cyberpunk-interior_70: -2425141455107940230
       pixel-cyberpunk-interior_71: 6549628054655898495
       pixel-cyberpunk-interior_72: 7003154914564339610
+      pixel-cyberpunk-interior_73: -187674629
+      pixel-cyberpunk-interior_74: -1969818907
+      pixel-cyberpunk-interior_75: 195440837
+      pixel-cyberpunk-interior_76: -1613869404
+      pixel-cyberpunk-interior_77: -1029291549
+      pixel-cyberpunk-interior_78: 1985074340
+      pixel-cyberpunk-interior_79: 183254952
       pixel-cyberpunk-interior_8: -3379596695981973779
+      pixel-cyberpunk-interior_80: 1931060621
+      pixel-cyberpunk-interior_81: 1549613802
+      pixel-cyberpunk-interior_82: -134769539
+      pixel-cyberpunk-interior_83: -491285844
+      pixel-cyberpunk-interior_84: 1362861876
+      pixel-cyberpunk-interior_85: -320944001
+      pixel-cyberpunk-interior_86: 321827478
+      pixel-cyberpunk-interior_87: 2074157719
+      pixel-cyberpunk-interior_88: -3652657
+      pixel-cyberpunk-interior_89: 1375275919
       pixel-cyberpunk-interior_9: 6681208203983884060
+      pixel-cyberpunk-interior_90: 1448003076
+      pixel-cyberpunk-interior_91: -577899571
+      pixel-cyberpunk-interior_92: 712826449
+      pixel-cyberpunk-interior_93: 1880065211
+      pixel-cyberpunk-interior_94: -996033819
+      pixel-cyberpunk-interior_95: 2115620202
+      pixel-cyberpunk-interior_96: -837704230
+      pixel-cyberpunk-interior_97: 1226896974
+      pixel-cyberpunk-interior_98: -1513271840
+      pixel-cyberpunk-interior_99: 2128698229
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
