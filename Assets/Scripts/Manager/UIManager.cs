@@ -49,6 +49,9 @@ public class UIManager : MonoBehaviour {
     public GameObject fade;
     public GameObject title;
     public GameObject end;
+    public GameObject skill1;
+    public GameObject skill2;
+    public GameObject skill3;
     public TextMeshProUGUI HUDcapacity;
     public TextMeshProUGUI value;
     public TextMeshProUGUI capacity;
@@ -84,6 +87,23 @@ public class UIManager : MonoBehaviour {
         startMenu = false; //
     }
 
+    public void ActiveSkill(){
+        if(SceneManager.GetActiveScene().name != "Lobby"){
+            skill1.SetActive(true);
+            skill2.SetActive(true);
+            if(GameManager.Instance.playerTurn && GameManager.Instance.enemyZone){
+                skill3.SetActive(true);
+            }
+            else{
+                skill3.SetActive(false);
+            }
+        }
+        else{
+            skill1.SetActive(false);
+            skill2.SetActive(false);
+            skill3.SetActive(false);
+        }
+    }
 
     public void SetMapBtn(){
         if(GameManager.Instance.map1Value!=0){
@@ -119,8 +139,9 @@ public class UIManager : MonoBehaviour {
     }
 
     public void FadeIn(){
+        
         fade.GetComponent<CanvasGroup>().DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => 
-        {fade.SetActive(false); GameManager.Instance.SetMaxValueInfo();});
+        {fade.SetActive(false); ActiveSkill(); GameManager.Instance.SetMaxValueInfo();});
     }
 
     public void FadeOut(){
@@ -130,6 +151,12 @@ public class UIManager : MonoBehaviour {
         SetMoveCount(); GameManager.Instance.fieldItems.Clear(); 
         selectPlanetPanel.SetActive(false); activeMap = false; 
         end.SetActive(false); GameManager.Instance.enemies.Clear();
+        GameManager.Instance.skill1CoolTime = 0;
+        GameManager.Instance.skill2CoolTime = 0;
+        GameManager.Instance.activeSkill = true;
+        GameManager.Instance.equipTp = false;
+        SetCoolTime();
+        UseTp();
         GameManager.Instance.teleport(); SetHeadInfo(); FadeIn();});
     }
 
@@ -150,6 +177,12 @@ public class UIManager : MonoBehaviour {
         GameManager.Instance.enemies.Clear();
         InventoryManager.Instance.currentCapacity = 0;
         InventoryManager.Instance.value = 0;
+        GameManager.Instance.skill1CoolTime = 0;
+        GameManager.Instance.skill2CoolTime = 0;
+        GameManager.Instance.activeSkill = true;
+        GameManager.Instance.equipTp = false;
+        SetCoolTime();
+        UseTp();
         SceneChanger.Instance.ChangeMap1(); SetHeadInfo(); FadeIn();});
     }
     public void GameStart(){

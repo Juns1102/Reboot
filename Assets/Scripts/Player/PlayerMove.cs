@@ -39,7 +39,7 @@ public class PlayerMove : MonoBehaviour
                 else if(value.Get<Vector2>().x == -1){
                     spriter.flipX = true;
                 }
-                RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1f, LayerMask.GetMask("Platform"));
+                RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1f, LayerMask.GetMask("Platform", "Enemy"));
                 if (moveStop && hit.collider == null) {
                     anim.SetBool("Walk", true);
                     if(SceneManager.GetActiveScene().name != "Lobby"){
@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour
                     GameManager.Instance.SetTp(moveStop);
                     targetPos = value.Get<Vector2>();
                     transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => 
-                    {SetMove(); GameManager.Instance.SetTp(moveStop); GameManager.Instance.CheckEnemies();});
+                    {SetMove(); GameManager.Instance.SetTp(moveStop); GameManager.Instance.CheckEnemies(); UIManager.Instance.ActiveSkill();});
                 }
             }
         }

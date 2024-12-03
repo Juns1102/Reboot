@@ -161,7 +161,6 @@ public class MonsterMove : MonoBehaviour {
 			}
 		}
 		vectorList.RemoveAt(vectorList.Count - 1);
-		Debug.Log(vectorList.Count);
 
 		return (minWeight >= INF ? INF : minWeight);
     }
@@ -189,7 +188,9 @@ public class MonsterMove : MonoBehaviour {
     public void Move() {
 		playerPos = GameObject.Find("TestPlayer").transform.position;
 		myPos = this.transform.position;
-        coolTime--;
+		if(coolTime > 0){
+        	coolTime--;
+		}
         if(Vector2.Distance(myPos, playerPos) <= 5) { //플레이어 - 몬스터 거리 5 이하면
             if(coolTime <= 0){
                 GameManager.Instance.playerTurn = false;
@@ -198,6 +199,7 @@ public class MonsterMove : MonoBehaviour {
                 }
                 else{
                     Attack();//공격
+					GameManager.Instance.playerTurn = true;
                 }
             }
         }
@@ -217,6 +219,9 @@ public class MonsterMove : MonoBehaviour {
 
     public void Attack(){
         Debug.Log("Attack");
+		coolTime += 3;
+		GameManager.Instance.playerHearts--;
+		UIManager.Instance.HeartsSet();
         //때리면 쿨타임 추가;
     }
     

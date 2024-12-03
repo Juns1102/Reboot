@@ -1,6 +1,7 @@
 using System.ComponentModel.Design;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class PlayerSkill : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void OnAttack(){
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu){
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill && !UIManager.Instance.startMenu && 
+        !UIManager.Instance.activeMenu && SceneManager.GetActiveScene().name != "Lobby"){
             if(GameManager.Instance.skill1CoolTime == 0){
                 GameManager.Instance.Skill1Set();
                 UIManager.Instance.SetCoolTime();
@@ -29,7 +31,8 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void OnTeleport(){
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu){
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.activeSkill && !UIManager.Instance.startMenu &&
+         !UIManager.Instance.activeMenu && SceneManager.GetActiveScene().name != "Lobby"){
             if(GameManager.Instance.skill2CoolTime == 0){
                 if(!GameManager.Instance.equipTp){
                     tpStone = Instantiate(tpStonePrefab, gameObject.transform);
@@ -63,7 +66,7 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void OnTurnEnd(){
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.playerTurn){
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.playerTurn && SceneManager.GetActiveScene().name != "Lobby"){
             pm.moveStop = true;
             GameManager.Instance.activeSkill = true;
             GameManager.Instance.SkillCoolDown();

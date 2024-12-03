@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour {
         }
         if(n > 0){
             enemyZone = true;
+            GameObject.Find("TestPlayer").GetComponent<PlayerMove>().moveStop = false;
         }
         else{
             enemyZone = false;
