@@ -195,7 +195,8 @@ public class MonsterMove : MonoBehaviour {
             if(coolTime <= 0){
                 GameManager.Instance.playerTurn = false;
                 if(ChaseRange()){
-                    transform.DOMove((Vector2)transform.position + Chasing(), 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {if(!ChaseRange())Attack(); GameManager.Instance.playerTurn = true;}); //플레이어 추격
+					// 걷는모션 켜주기
+                    transform.DOMove((Vector2)transform.position + Chasing(), 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {if(!ChaseRange())Attack(); GameManager.Instance.playerTurn = true; /*걷는모션 꺼주기*/}); //플레이어 추격
                 }
                 else{
                     Attack();//공격
@@ -220,6 +221,7 @@ public class MonsterMove : MonoBehaviour {
     public void Attack(){
         Debug.Log("Attack");
 		coolTime += 3;
+		//때리는 모션 켜주기
 		GameManager.Instance.playerHearts--;
 		UIManager.Instance.HeartsSet();
         //때리면 쿨타임 추가;
