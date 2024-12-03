@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 1993420109, guid: 985d42a2b6a3bf14f9c443829443c88a, type: 3}
   name: C
   value: 400
-  weight: 500
+  weight: 50
