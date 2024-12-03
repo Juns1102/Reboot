@@ -65,7 +65,9 @@ public class PlayerMove : MonoBehaviour
             moveStop = true;
         }
         GameManager.Instance.activeSkill = true;
-        GameManager.Instance.SkillCoolDown();
+        if(!GameManager.Instance.enemyZone){
+            GameManager.Instance.SkillCoolDown();
+        }
         UIManager.Instance.SetCoolTime();
     }
 }
