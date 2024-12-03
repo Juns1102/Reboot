@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System;
 using Mono.Cecil;
 using DG.Tweening;
+using System.Collections;
 
 public class MonsterMove : MonoBehaviour {
     const int INF = 10000;
@@ -195,7 +196,9 @@ public class MonsterMove : MonoBehaviour {
             if(coolTime <= 0){
                 GameManager.Instance.playerTurn = false;
                 if(ChaseRange()){
-					// 걷는모션 켜주기
+                    // 걷는모션 켜주기
+                    GetComponent<Animator>().SetTrigger("Run");
+
                     transform.DOMove((Vector2)transform.position + Chasing(), 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {if(!ChaseRange())Attack(); GameManager.Instance.playerTurn = true; /*걷는모션 꺼주기*/}); //플레이어 추격
                 }
                 else{
@@ -221,8 +224,9 @@ public class MonsterMove : MonoBehaviour {
     public void Attack(){
         Debug.Log("Attack");
 		coolTime += 3;
-		//때리는 모션 켜주기
-		GameManager.Instance.playerHearts--;
+        GetComponent<Animator>().SetTrigger("Attack");
+        //때리는 모션 켜주기
+        GameManager.Instance.playerHearts--;
 		UIManager.Instance.HeartsSet();
         //때리면 쿨타임 추가;
     }
@@ -235,7 +239,11 @@ public class MonsterMove : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")){
-            Die();//여기 Die 트리거 써서 죽는 애니메이션 나오게 하고 애니메이션 이벤트에 Die넣기
+            GetComponent<Animator>().SetTrigger("Die");
+
+            // 코루틴 실행 (0.6초 후 오브젝트 삭제)
+            StartCoroutine(DestroyAfterAnimation(1.2f));
+            //Die();여기 Die 트리거 써서 죽는 애니메이션 나오게 하고 애니메이션 이벤트에 Die넣기
         }
     }
 
@@ -243,5 +251,12 @@ public class MonsterMove : MonoBehaviour {
         GameManager.Instance.enemies.Remove(gameObject);
         Destroy(gameObject);
         GameManager.Instance.CheckEnemies();
+    }
+    private IEnumerator DestroyAfterAnimation(float delay)
+    {
+        GameManager.Instance.enemies.Remove(gameObject);
+        yield return new WaitForSeconds(delay); // 0.6초 기다림
+        Destroy(gameObject); // 오브젝트 삭제
+        GameManager.Instance.CheckEnemies(); // 나머지 처리
     }
 }
