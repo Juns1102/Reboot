@@ -157,6 +157,8 @@ public class UIManager : MonoBehaviour {
         GameManager.Instance.equipTp = false;
         SetCoolTime();
         UseTp();
+        GameManager.Instance.playerHearts = 3;
+        HeartsSet();
         GameManager.Instance.teleport(); SetHeadInfo(); FadeIn();});
     }
 
@@ -183,6 +185,8 @@ public class UIManager : MonoBehaviour {
         GameManager.Instance.equipTp = false;
         SetCoolTime();
         UseTp();
+        GameManager.Instance.playerHearts = 3;
+        HeartsSet();
         SceneChanger.Instance.ChangeMap1(); SetHeadInfo(); FadeIn();});
     }
     public void GameStart(){

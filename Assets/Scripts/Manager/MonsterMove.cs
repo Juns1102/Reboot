@@ -238,7 +238,7 @@ public class MonsterMove : MonoBehaviour {
     // }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Player")){
+        if(other.gameObject.CompareTag("Attack")){
             GetComponent<Animator>().SetTrigger("Die");
 
             // 코루틴 실행 (0.6초 후 오브젝트 삭제)
