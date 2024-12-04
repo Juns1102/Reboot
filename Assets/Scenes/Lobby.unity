@@ -26135,6 +26135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 22aea74a44509ac49b465dc780967f68, type: 3}
     - target: {fileID: 156129144002390763, guid: abff10aeb021e214aa15083418def10b, type: 3}
+      propertyPath: startMenu
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 156129144002390763, guid: abff10aeb021e214aa15083418def10b, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1083979437}
@@ -26365,6 +26369,10 @@ PrefabInstance:
     - target: {fileID: 3107595893433375931, guid: abff10aeb021e214aa15083418def10b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444209468814473714, guid: abff10aeb021e214aa15083418def10b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3516363876524807188, guid: abff10aeb021e214aa15083418def10b, type: 3}
       propertyPath: m_AnchorMax.y

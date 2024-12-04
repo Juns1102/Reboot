@@ -91,7 +91,7 @@ public class UIManager : MonoBehaviour {
         inventoryUI.SetActive(activeInventory);
         informationUI.SetActive(activeInventory);
         end.SetActive(activeMenu);
-        startMenu = false; //
+        startMenu = true; 
     }
 
     public void ActiveSkill(){
