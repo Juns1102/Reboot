@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void SetMove(){
+    public void SetMove(){
         anim.SetBool("Walk", false);
         if(!GameManager.Instance.enemyZone){
             moveStop = true;

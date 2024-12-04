@@ -28,6 +28,7 @@ public class PlayerSkill : MonoBehaviour
                 GameManager.Instance.Skill1Set();
                 UIManager.Instance.SetCoolTime();
                 anim.SetTrigger("Attack");
+                UIManager.Instance.ActiveSkill();
             }
         }
     }
@@ -67,7 +68,9 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void TpStep3(){
-        transform.DOMove((Vector2)transform.position + new Vector2(0, -0.5f), 0.5f).SetEase(Ease.OutQuad).OnComplete(() => {ccd.enabled = true; Destroy(tpStone);});
+        transform.DOMove((Vector2)transform.position + new Vector2(0, -0.5f), 0.5f).SetEase(Ease.OutQuad).OnComplete(() => 
+        {ccd.enabled = true; Destroy(tpStone); GameManager.Instance.CheckEnemies(); pm.SetMove();
+        UIManager.Instance.ActiveSkill();});
     }
 
     private void OnTurnEnd(){

@@ -264,10 +264,6 @@ public class MonsterMove : MonoBehaviour {
         if(other.gameObject.CompareTag("Attack")){
             GetComponent<Animator>().SetTrigger("Die");
             audioSource.PlayOneShot(Dead);
-
-            // 코루틴 실행 (0.6초 후 오브젝트 삭제)
-            StartCoroutine(DestroyAfterAnimation(1.2f));
-            //Die();여기 Die 트리거 써서 죽는 애니메이션 나오게 하고 애니메이션 이벤트에 Die넣기
         }
     }
 
@@ -275,12 +271,7 @@ public class MonsterMove : MonoBehaviour {
         GameManager.Instance.enemies.Remove(gameObject);
         Destroy(gameObject);
         GameManager.Instance.CheckEnemies();
-    }
-    private IEnumerator DestroyAfterAnimation(float delay)
-    {
-        GameManager.Instance.enemies.Remove(gameObject);
-        yield return new WaitForSeconds(delay); // 0.6초 기다림
-        Destroy(gameObject); // 오브젝트 삭제
-        GameManager.Instance.CheckEnemies(); // 나머지 처리
+		GameObject.Find("TestPlayer").GetComponent<PlayerMove>().SetMove();
+        UIManager.Instance.ActiveSkill();
     }
 }
