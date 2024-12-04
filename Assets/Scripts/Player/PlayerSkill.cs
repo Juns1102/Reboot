@@ -28,7 +28,6 @@ public class PlayerSkill : MonoBehaviour
                 GameManager.Instance.Skill1Set();
                 UIManager.Instance.SetCoolTime();
                 anim.SetTrigger("Attack");
-                UIManager.Instance.ActiveSkill();
             }
         }
     }
