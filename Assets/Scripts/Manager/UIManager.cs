@@ -214,8 +214,6 @@ public class UIManager : MonoBehaviour {
     }
     public void UseTp(){
         skill2Panel.color = new Color(255/255, 255/255, 255/255, (float)100/255);
-        audioSource.PlayOneShot(Teleport);
-
     }
 
     public void SetCoolTime(){

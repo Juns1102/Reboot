@@ -13945,7 +13945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656293484402983488, guid: 3ddf5251415a90643b599623448d95d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5656293484402983488, guid: 3ddf5251415a90643b599623448d95d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22779,6 +22779,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &437288908 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -3961476445391201575, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
+  m_PrefabInstance: {fileID: 3245528494075255884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &542344421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7880614391751371797, guid: 7bbae92b73652bc4399924656ad09e27, type: 3}
@@ -27261,6 +27266,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5337510408764450354, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
+      propertyPath: Teleport
+      value: 
+      objectReference: {fileID: 8300000, guid: 574430cf1d1152645a08d29d8094f1f4, type: 3}
+    - target: {fileID: 5337510408764450354, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 437288908}
     - target: {fileID: 6633724647508131390, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
       propertyPath: walkSound
       value: 

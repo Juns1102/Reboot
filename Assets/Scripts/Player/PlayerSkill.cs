@@ -12,6 +12,8 @@ public class PlayerSkill : MonoBehaviour
     GameObject tpStone;
     public GameObject tpStonePrefab;
     public BoxCollider2D box;
+    public AudioSource audioSource;
+    public AudioClip Teleport;
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -47,6 +49,8 @@ public class PlayerSkill : MonoBehaviour
                     GameManager.Instance.Skill2Set();
                     UIManager.Instance.SetCoolTime();
                     GameManager.Instance.equipTp = false;
+                    audioSource.PlayOneShot(Teleport);
+
                 }
             }
         }
@@ -59,6 +63,7 @@ public class PlayerSkill : MonoBehaviour
 
     private void TpStep2(){
         transform.DOMove(new Vector2(tpPos.x, tpPos.y + 0.5f), 0.5f).SetEase(Ease.OutQuad).OnComplete(() => TpStep3());
+
     }
 
     private void TpStep3(){

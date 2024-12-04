@@ -306,6 +306,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5337510408764450354, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
+      propertyPath: Teleport
+      value: 
+      objectReference: {fileID: 8300000, guid: 574430cf1d1152645a08d29d8094f1f4, type: 3}
+    - target: {fileID: 5337510408764450354, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 244951430}
     - target: {fileID: 6633724647508131390, guid: 9eb95b042edec0f4087abc938d94a1b0, type: 3}
       propertyPath: audioSource
       value: 
