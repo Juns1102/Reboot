@@ -43,7 +43,6 @@ public class PlayerMove : MonoBehaviour
                 else if(value.Get<Vector2>().x == -1){
                     spriter.flipX = true;
                 }
-                GameManager.Instance.CheckEnemies();
                 RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1f, LayerMask.GetMask("Platform", "Enemy"));
                 if (moveStop && hit.collider == null) {
                     anim.SetBool("Walk", true);
