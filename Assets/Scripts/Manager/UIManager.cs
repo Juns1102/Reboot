@@ -3,6 +3,8 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using static Unity.Collections.AllocatorManager;
 
 public class UIManager : MonoBehaviour {
     #region Singleton
@@ -35,6 +37,11 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
     float fadeTime;
+    public AudioSource audioSource;
+    public AudioClip Mapchange;
+    public AudioClip Teleport;
+    public AudioClip Inven;
+
 
     private bool activeInventory;
     public bool activeMap;
@@ -159,7 +166,9 @@ public class UIManager : MonoBehaviour {
         UseTp();
         GameManager.Instance.playerHearts = 3;
         HeartsSet();
-        GameManager.Instance.teleport(); SetHeadInfo(); FadeIn();});
+            audioSource.PlayOneShot(Mapchange);
+
+            GameManager.Instance.teleport(); SetHeadInfo(); FadeIn();});
     }
 
     public void Retry(){
@@ -205,6 +214,8 @@ public class UIManager : MonoBehaviour {
     }
     public void UseTp(){
         skill2Panel.color = new Color(255/255, 255/255, 255/255, (float)100/255);
+        audioSource.PlayOneShot(Teleport);
+
     }
 
     public void SetCoolTime(){
@@ -246,13 +257,17 @@ public class UIManager : MonoBehaviour {
         if(activeInventory){
             inventoryUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear).OnComplete(() => SetInventory());
             informationUI.GetComponent<CanvasGroup>().DOFade(0, fadeTime).SetEase(Ease.Linear);
+            audioSource.PlayOneShot(Inven);
+
         }
-        else{
+        else {
             ItemPlace();
             SetInventory();
             SetPlanetInfo();
             inventoryUI.GetComponent<CanvasGroup>().DOFade(1, fadeTime).SetEase(Ease.Linear);
             informationUI.GetComponent<CanvasGroup>().DOFade(1, fadeTime).SetEase(Ease.Linear);
+            audioSource.PlayOneShot(Inven);
+
         }
     }
 

@@ -39,6 +39,10 @@ public class InventoryManager : MonoBehaviour {
     public int map3Cap;
     public List<ItemData> items = new List<ItemData>();
 
+    public AudioSource audioSource;
+    public AudioClip Click;
+    public AudioClip Remove;
+
     private void Start() {
         currentCapacity = 0;
     }
@@ -48,6 +52,8 @@ public class InventoryManager : MonoBehaviour {
         QuickSort(items, 0, items.Count - 1, "name");
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
+        audioSource.PlayOneShot(Click);
+
     }
 
     public void SortName()
@@ -56,6 +62,8 @@ public class InventoryManager : MonoBehaviour {
         ReverseList(items);
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
+        audioSource.PlayOneShot(Click);
+
     }
 
     public void ReverseSortValue()
@@ -63,6 +71,8 @@ public class InventoryManager : MonoBehaviour {
         QuickSort(items, 0, items.Count - 1, "value");
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
+        audioSource.PlayOneShot(Click);
+
     }
 
     public void SortValue()
@@ -71,6 +81,8 @@ public class InventoryManager : MonoBehaviour {
         ReverseList(items);
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
+        audioSource.PlayOneShot(Click);
+
     }
 
     public void ReverseSortWeight()
@@ -78,6 +90,8 @@ public class InventoryManager : MonoBehaviour {
         QuickSort(items, 0, items.Count - 1, "weight");
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
+        audioSource.PlayOneShot(Click);
+
     }
 
     public void SortWeight()
@@ -86,6 +100,8 @@ public class InventoryManager : MonoBehaviour {
         ReverseList(items);
         UIManager.Instance.ItemPlace();
         UIManager.Instance.BottumInfoReset();
+        audioSource.PlayOneShot(Click);
+
     }
 
     public void ReverseList(List<ItemData> list)
@@ -173,6 +189,8 @@ public class InventoryManager : MonoBehaviour {
             value -= items[num].value;
             currentCapacity -= items[num].weight;
             items.RemoveAt(num);
+            audioSource.PlayOneShot(Remove);
+
         }
     }
 }

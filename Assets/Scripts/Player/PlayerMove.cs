@@ -12,7 +12,10 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D body;
     private SpriteRenderer spriter;
     public bool moveStop;
-    
+
+    public AudioSource audioSource;
+    public AudioClip walkSound;
+    public AudioClip attackSound;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -69,5 +72,16 @@ public class PlayerMove : MonoBehaviour
             GameManager.Instance.SkillCoolDown();
         }
         UIManager.Instance.SetCoolTime();
+    }
+    public void PlayWalkSound()
+    {
+        audioSource.PlayOneShot(walkSound);
+    }
+
+
+    // 공격 소리
+    public void PlayAttackSound()
+    {
+        audioSource.PlayOneShot(attackSound);
     }
 }

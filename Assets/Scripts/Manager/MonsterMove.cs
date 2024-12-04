@@ -19,6 +19,10 @@ public class MonsterMove : MonoBehaviour {
     public GameObject pos;
 	public Vector2 plusMinus;
     public int coolTime;
+    public AudioSource audioSource;
+    public AudioClip Walk;
+    public AudioClip At;
+    public AudioClip Dead;
 
     private void Start() {
         GameManager.Instance.enemies.Add(gameObject);
@@ -198,6 +202,7 @@ public class MonsterMove : MonoBehaviour {
                 if(ChaseRange()){
                     // 걷는모션 켜주기
                     GetComponent<Animator>().SetTrigger("Run");
+                    audioSource.PlayOneShot(Walk);
 
                     transform.DOMove((Vector2)transform.position + Chasing(), 0.7f).SetEase(Ease.OutQuad).OnComplete(() => {if(!ChaseRange())Attack(); GameManager.Instance.playerTurn = true; /*걷는모션 꺼주기*/}); //플레이어 추격
                 }
@@ -228,9 +233,11 @@ public class MonsterMove : MonoBehaviour {
         //때리는 모션 켜주기
         GameManager.Instance.playerHearts--;
 		UIManager.Instance.HeartsSet();
+        audioSource.PlayOneShot(At);
+
         //때리면 쿨타임 추가;
     }
-    
+
     // private void OnCollisionEnter2D(Collision2D other) {
     //     if(other.gameObject.CompareTag("Player")){
     //         Die();//여기 Die 트리거 써서 죽는 애니메이션 나오게 하고 애니메이션 이벤트에 Die넣기
@@ -240,6 +247,7 @@ public class MonsterMove : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Attack")){
             GetComponent<Animator>().SetTrigger("Die");
+            audioSource.PlayOneShot(Dead);
 
             // 코루틴 실행 (0.6초 후 오브젝트 삭제)
             StartCoroutine(DestroyAfterAnimation(1.2f));

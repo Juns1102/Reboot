@@ -5,6 +5,8 @@ public class Item : MonoBehaviour
 {
     public ItemData[] datas;
     public ItemData data;
+    public AudioSource audioSource;
+    public AudioClip ItemGet;
 
     private void SetUp(ItemData[] datas) {
         int n = Random.Range(0, datas.Length);
@@ -30,6 +32,8 @@ public class Item : MonoBehaviour
                 InventoryManager.Instance.currentCapacity += data.weight;
                 InventoryManager.Instance.value += data.value;
                 UIManager.Instance.SetHeadInfo();
+                audioSource.PlayOneShot(ItemGet);
+
             }
         }
     }
