@@ -22,6 +22,7 @@ public class PlayerMove : MonoBehaviour
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
         moveStop = true;
+        anim.SetBool("Walk", false);
     }
 
     private void FixedUpdate() {
@@ -33,7 +34,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnMove(InputValue value) {
         if (InventoryManager.Instance.CheckCapacity() && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") &&
-         !UIManager.Instance.activeMap && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu) {
+         !UIManager.Instance.activeMap && !UIManager.Instance.startMenu && !UIManager.Instance.activeMenu && GameManager.Instance.playerTurn) {
             if (Mathf.Abs(value.Get<Vector2>().x) == 1 || 
                 Mathf.Abs(value.Get<Vector2>().y) == 1) {
                 if(value.Get<Vector2>().x == 1){
@@ -42,21 +43,20 @@ public class PlayerMove : MonoBehaviour
                 else if(value.Get<Vector2>().x == -1){
                     spriter.flipX = true;
                 }
+                GameManager.Instance.CheckEnemies();
                 RaycastHit2D hit = Physics2D.Raycast(body.position, value.Get<Vector2>(), 1f, LayerMask.GetMask("Platform", "Enemy"));
                 if (moveStop && hit.collider == null) {
                     anim.SetBool("Walk", true);
                     if(SceneManager.GetActiveScene().name != "Lobby"){
                         GameManager.Instance.moveCount--;
                         UIManager.Instance.SetMoveCount();
-                        if(GameManager.Instance.moveCount <= 0){
-                            UIManager.Instance.Menu();
-                        }
                     }
                     moveStop = false;
                     GameManager.Instance.SetTp(moveStop);
                     targetPos = value.Get<Vector2>();
                     transform.DOMove((Vector2)transform.position + targetPos, 0.7f).SetEase(Ease.OutQuad).OnComplete(() => 
-                    {SetMove(); GameManager.Instance.SetTp(moveStop); GameManager.Instance.CheckEnemies(); UIManager.Instance.ActiveSkill();});
+                    {SetMove(); GameManager.Instance.SetTp(moveStop); GameManager.Instance.CheckEnemies(); 
+                    UIManager.Instance.ActiveSkill(); if(GameManager.Instance.moveCount <= 0)anim.SetTrigger("Die");});
                 }
             }
         }
@@ -79,9 +79,13 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    // °ø°Ý ¼Ò¸®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½
     public void PlayAttackSound()
     {
         audioSource.PlayOneShot(attackSound);
+    }
+
+    public void Die(){
+        UIManager.Instance.Menu();
     }
 }

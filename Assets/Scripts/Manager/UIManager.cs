@@ -166,9 +166,13 @@ public class UIManager : MonoBehaviour {
         UseTp();
         GameManager.Instance.playerHearts = 3;
         HeartsSet();
-            audioSource.PlayOneShot(Mapchange);
-
-            GameManager.Instance.teleport(); SetHeadInfo(); FadeIn();});
+        audioSource.PlayOneShot(Mapchange);
+        if(GameManager.Instance.map1Value !=0 && GameManager.Instance.map2Value !=0 &&
+        GameManager.Instance.map3Value !=0){
+            Menu();
+        }
+        
+        GameManager.Instance.teleport(); SetHeadInfo(); FadeIn();});
     }
 
     public void Retry(){
@@ -196,6 +200,11 @@ public class UIManager : MonoBehaviour {
         UseTp();
         GameManager.Instance.playerHearts = 3;
         HeartsSet();
+        GameManager.Instance.map1Value = 0;
+        GameManager.Instance.map2Value = 0;
+        GameManager.Instance.map3Value = 0;
+        SetScore();
+        GameManager.Instance.enemyZone = false;
         SceneChanger.Instance.ChangeMap1(); SetHeadInfo(); FadeIn();});
     }
     public void GameStart(){

@@ -71,7 +71,7 @@ public class PlayerSkill : MonoBehaviour
     }
 
     private void OnTurnEnd(){
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.playerTurn && SceneManager.GetActiveScene().name != "Lobby"){
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && GameManager.Instance.playerTurn && SceneManager.GetActiveScene().name != "Lobby" && GameManager.Instance.enemyZone){
             pm.moveStop = true;
             GameManager.Instance.activeSkill = true;
             GameManager.Instance.SkillCoolDown();

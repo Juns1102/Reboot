@@ -23,10 +23,21 @@ public class MonsterMove : MonoBehaviour {
     public AudioClip Walk;
     public AudioClip At;
     public AudioClip Dead;
+	private SpriteRenderer sr;
 
     private void Start() {
         GameManager.Instance.enemies.Add(gameObject);
+		sr = GetComponent<SpriteRenderer>();
     }
+
+	private void Update() {
+		if(gameObject.transform.position.x <playerPos.x){
+			sr.flipX = false;
+		}
+		else{
+			sr.flipX = true;
+		}
+	}
 
 
 	//먼저 주변 맵 정보를 수집
@@ -231,12 +242,17 @@ public class MonsterMove : MonoBehaviour {
 		coolTime += 3;
         GetComponent<Animator>().SetTrigger("Attack");
         //때리는 모션 켜주기
-        GameManager.Instance.playerHearts--;
-		UIManager.Instance.HeartsSet();
         audioSource.PlayOneShot(At);
-
         //때리면 쿨타임 추가;
     }
+
+	public void Damage(){
+		GameManager.Instance.playerHearts--;
+		UIManager.Instance.HeartsSet();
+		if(GameManager.Instance.playerHearts<=0){
+			GameObject.Find("TestPlayer").GetComponent<Animator>().SetTrigger("Die");
+		}
+	}
 
     // private void OnCollisionEnter2D(Collision2D other) {
     //     if(other.gameObject.CompareTag("Player")){
